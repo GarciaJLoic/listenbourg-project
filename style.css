@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Oswald&family=Raleway:wght@100;200&display=swap');
+
+/* ****************Création des variables**************** */
+:root {
+    /* ************Colors************ */
+    --main-color: #AD2C40;
+    --secondary-color: #415271;
+    --light: white;
+    --dark: black;
+    /* ************spacing************ */
+    --spacing: 8px;
+    --spacing-2: calc(var(--spacing) * 2);
+    --spacing-4: calc(var(--spacing) * 4);
+
+    /* ************fonts************ */
+    --title-font: 'Merriweather', serif;
+    --secondaryTitle-font: 'Oswald', sans-serif;
+    --main-font: 'Raleway', sans-serif;
+
+    /* ************size************ */
+    --text-font-size: 8pt;
+    --secondaryTitle-size: 16pt;
+    --title-font-size: 32pt;
+}
+
+/* header {
+    background-color: var(--light);
+}
+
+h1 {
+    font-family: var(--title-font);
+    font-size: var(--title-font-size);
+    color: var(--dark);
+}
+
+footer {
+    background-color: var(--main-color);
+}
+
+h2 {
+    font-family: var(--secondaryTitle-font);
+    font-size: var(--secondaryTitle-size);
+    color: var(--font-color);
+}
+
+p {
+    font-family: var(--main-font);
+    font-size: var(--text-font-size);
+    color: var(--font-color);
+} */
