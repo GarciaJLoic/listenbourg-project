@@ -1,51 +1,144 @@
+/***** NAV MENU****/
+
 nav {
     display: flex;
+    /* Transforme le nav en conteneur flexible*/
     flex-direction: column;
-    justify-content: center;
+    /*  Oriente les éléments contenu dans nav en colonnes*/
     align-items: center;
+    /* Centre les éléments selon l'axe secondaire */
+    position: fixed;
+    /* Fixe le nav à l'écran */
+    width: 100%;
+    /*  Le nav prend tout l'espace disponible en largeur */
 }
 
 ul {
     display: flex;
+    /* Transforme le ul en conteneur flexible*/
     flex-wrap: wrap;
-    width: 320px;
+    /*  Permet aux éléments d'aller à la ligne*/
+    width: 420px;
+    /*  Défini la largeur*/
     justify-content: center;
-
+    /* Centre les éléments selon l'axe principal */
+    padding: 0;
+    /* Supprime le padding par défaut */
+    position: relative;
+    /* position l'élément de façon relative pour permettre déplacer plus facilement */
+    top: 71px;
+    /* Le déplace vers le bas */
+    z-index: 1;
+    /* Permet à l'élément d'être au premier plan */
 }
 
-ul::after {
-    content: "";
-    height: 20px;
-    width: 100%;
-}
 
 li {
     list-style-type: none;
-    background-color: black;
-    width: 40px;
-    height: 40px;
+    /*  Retire les puces */
+    background-color: white;
+    /* Défini le fond d'écran des éléments de la liste */
+    width: 50px;
+    /*  Défini la largeur */
+    height: 50px;
+    /* Défini la hauteur */
     border-radius: 50%;
+    /* Transforme les éléménts en cercle */
+    box-shadow: -0px 0px 5px 0px rgba(0, 0, 0, 0.33);
+    /*  Défini l'ombre autour des éléments*/
+    transition: box-shadow 1s;
+    /*  Paramètre la transition*/
+}
+
+li:hover,
+#navButton:hover,
+.iconeActiv {
+    box-shadow: -0px 0px 5px 0px red;
+    /*  Change la couleur de l'omber lors du survol de l'icone ou lorsque la page est active*/
+    transition: box-shadow 1s;
+    /*  Paramètre la transition*/
 }
 
 #navList a {
     margin: 20px;
+    /* Défini la marge extérieure des éléments  */
     opacity: 1;
+    /*  Règle l'opacité à 1 pour premettre la transition lors de la réaparition des icones*/
     scale: 1;
+    /*  Règle l'échelle à 1 pour premettre la transition lors de la réaparition des icones*/
     pointer-events: visible;
-    transition: opacity 0.5s, scale 0.5s;
-}
-
-#navButton {
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    margin: 20px;
-    visibility: visible;
+    /*  Remet le pointeur dans sa position d'origine*/
+    transition: opacity 1s, scale 1s;
+    /*  Paramètre la transition*/
 }
 
 #navList .hidden {
     opacity: 0;
+    /*  Règle l'opacité à 0 pour faire disparaitre les icones*/
     scale: 0;
-    transition: opacity 0.5s, scale 0.5s;
+    /*  Règle l'échelle à 0 pour faire disparaitre les icones*/
     pointer-events: none;
+    /*  Désactive le pointeur pour empêcher le clic des éléments invisible*/
+    transition: opacity 1s, scale 1s;
+    /*  Paramètre la transition*/
+}
+
+#navList a img {
+    margin: 5px;
+    /*  Place les icones */
+    width: 40px;
+    /* Défini la taille des icones  */
+}
+
+#navList .iconeActu {
+    /* Correction de la position et de la taille d'un icone */
+    width: 36px;
+    margin: 2px 7px;
+}
+
+#navButton {
+    border-radius: 50%;
+    /* Transforme le bouton en cercle */
+    width: 68px;
+    /* Défini la largeur */
+    height: 68px;
+    /*  Défini la hauteur*/
+    margin: 20px;
+    /* Défini la marge extérieure des éléments  */
+    background: url(/assets/iconeListenbourg.png) no-repeat;
+    /* Défini le fond d'écran du bouton */
+    border: none;
+    /* Supprime la bordure par défaut*/
+    background-position: -8px -8px;
+    /*  repositionne le background*/
+    box-shadow: -0px 0px 5px 0px rgba(0, 0, 0, 0.33);
+    /* Défini l'ombre autour du bouton */
+    cursor: default;
+    /*  Donne un aspect clickable au bouton*/
+}
+
+
+/* Bandeau de couleur */
+.box {
+    background-color: red;
+    /* Défini la couleur */
+    width: 100%;
+    /*  Permet au bandeau de prendre toute la largeur*/
+    height: 80px;
+    /*  Défini la hauteur*/
+
+}
+
+.inBox {
+    /* Cercle blanc autour de l'icone du Listenbourg */
+    background-color: white;
+    /* Défini la couleur */
+    clip-path: ellipse(30% 30% at 50% 0%);
+    /* Prend la forme du cercle*/
+    width: 160px;
+    /* Défini la largeur */
+    height: 160px;
+    /* Défini la hauteur */
+    margin: auto;
+    /* Place le cercle au milieu de l'écran*/
 }
