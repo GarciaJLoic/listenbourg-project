@@ -23,28 +23,102 @@
     --title-font-size: 32pt;
 }
 
-/* header {
-    background-color: var(--light);
+/* Police, taille et couleur de base sur tout le site */
+* {
+    font-family: var(--main-font);
+    font-size: var(--text-font-size);
+    color: var(--dark);
 }
 
+/* Police, taille et couleur du H1 */
 h1 {
-    font-family: var(--title-font);
+    font-family: var(--Title-font);
     font-size: var(--title-font-size);
     color: var(--dark);
 }
 
-footer {
-    background-color: var(--main-color);
-}
-
+/* Police, taille et couleur du H2 */
 h2 {
     font-family: var(--secondaryTitle-font);
     font-size: var(--secondaryTitle-size);
-    color: var(--font-color);
+    color: var(--main-color);
 }
 
-p {
-    font-family: var(--main-font);
+form {
+    padding: 1em;
+    border: 1px solid #CCC;
+    box-shadow: 0 0 5px grey;
+    margin-bottom: var(--spacing-2);
+    margin-top: var(--spacing-2);
+    align-items: center;
+    margin-left: var(--spacing);
+    margin-right: var(--spacing);
+}
+
+.formu {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+
+    justify-content: center;
+}
+
+input {
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+.button {
+    text-align: right;
+    margin-top: var(--spacing);
+    width: 150px;
+}
+
+button {
+    background-color: var(--secondary-color);
+    color: var(--light);
+    font-weight: bold;
+}
+
+/* mise en place d'un flex pour mettre en page les icones et le bouton envoyer */
+.social {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+
+}
+
+/* modification de la ligne sous le formulaire contact */
+.footer_2 {
+    background-color: var(--main-color);
     font-size: var(--text-font-size);
-    color: var(--font-color);
-} */
+    text-align: right;
+    font-weight: bold;
+    padding-top: var(--spacing-2);
+}
+
+/* modification de la couleur et de la taille des icones */
+i {
+    color: var(--dark);
+    font-size: var(--secondaryTitle-size);
+    padding: var(--spacing);
+}
+
+
+/* @media screen and (min-width: 738px) {
+    body {
+      flex-direction: column;
+    }
+    .buttons {
+      display: flex;
+      justify-content: center;
+    }
+    button .text {
+      display: initial;
+    } */
