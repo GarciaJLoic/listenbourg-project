@@ -30,6 +30,11 @@
     color: var(--dark);
 }
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 /* Police, taille et couleur du H1 */
 h1 {
     font-family: var(--Title-font);
@@ -41,8 +46,35 @@ h1 {
 h2 {
     font-family: var(--secondaryTitle-font);
     font-size: var(--secondaryTitle-size);
+    color: var(--dark);
+}
+
+footer h2 {
+    font-family: var(--secondaryTitle-font);
+    font-size: var(--secondaryTitle-size);
     color: var(--main-color);
 }
+
+header {
+    background: url(assets/banniere_mob.jpg) no-repeat center top;
+    background-size: cover;
+    height: 270px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+header h1,
+h2 {
+    color: var(--light);
+    margin: var(--spacing);
+    height: auto;
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 1);
+}
+
 
 form {
     padding: 1em;
@@ -110,15 +142,10 @@ i {
     padding: var(--spacing);
 }
 
-
-/* @media screen and (min-width: 738px) {
-    body {
-      flex-direction: column;
+@media screen and (min-width: 600px) {
+    header {
+        background: url(assets/banniere_web.jpg) no-repeat center top;
+        background-size: cover;
+        height: 350px;
     }
-    .buttons {
-      display: flex;
-      justify-content: center;
-    }
-    button .text {
-      display: initial;
-    } */
+}
