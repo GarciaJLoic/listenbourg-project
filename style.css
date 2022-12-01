@@ -1,50 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Oswald&family=Raleway:wght@100;200&display=swap');
-
-/* ****************Création des variables**************** */
-:root {
-    /* ************Colors************ */
-    --main-color: #AD2C40;
-    --secondary-color: #415271;
-    --light: white;
-    --dark: black;
-    /* ************spacing************ */
-    --spacing: 8px;
-    --spacing-2: calc(var(--spacing) * 2);
-    --spacing-4: calc(var(--spacing) * 4);
-
-    /* ************fonts************ */
-    --title-font: 'Merriweather', serif;
-    --secondaryTitle-font: 'Oswald', sans-serif;
-    --main-font: 'Raleway', sans-serif;
-
-    /* ************size************ */
-    --text-font-size: 8pt;
-    --secondaryTitle-size: 16pt;
-    --title-font-size: 32pt;
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-/* header {
-    background-color: var(--light);
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 320px;
+    justify-content: center;
+
 }
 
-h1 {
-    font-family: var(--title-font);
-    font-size: var(--title-font-size);
-    color: var(--dark);
+ul::after {
+    content: "";
+    height: 20px;
+    width: 100%;
 }
 
-footer {
-    background-color: var(--main-color);
+li {
+    list-style-type: none;
+    background-color: black;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
 
-h2 {
-    font-family: var(--secondaryTitle-font);
-    font-size: var(--secondaryTitle-size);
-    color: var(--font-color);
+#navList a {
+    margin: 20px;
+    opacity: 1;
+    scale: 1;
+    pointer-events: visible;
+    transition: opacity 0.5s, scale 0.5s;
 }
 
-p {
-    font-family: var(--main-font);
-    font-size: var(--text-font-size);
-    color: var(--font-color);
-} */
+#navButton {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: 20px;
+    visibility: visible;
+}
+
+#navList .hidden {
+    opacity: 0;
+    scale: 0;
+    transition: opacity 0.5s, scale 0.5s;
+    pointer-events: none;
+}
