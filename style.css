@@ -23,7 +23,70 @@
     --title-font-size: 32pt;
 }
 
-/* header {
+/* header */
+
+
+                                          /* &&&&&&&&&&&&&&&&  MAIN  &&&&&&&&&&&&&&& */
+*{margin: 0;
+}
+
+h1{
+    font-family:'Oswald', sans-serif;                            /* Police titre principal */
+    font-size: var( --title-font-size);                          /* Taille police titre principal */
+    text-align: center;                                          /* Centrer le titre */
+    padding-bottom: 5px;                                         /* Padding bas */
+    border-bottom: 2px solid #AD2C40;                          /* Ligne du bas titre principal */
+}
+
+section{                                                          
+    width: 85%;
+    margin: auto;
+    
+}
+
+
+p{
+    font-family:'Raleway', sans-serif;                            /* Police paragraphe */
+    font-size:  var(--secondaryTitle-size);                       /* Taille police paragraphe */
+                                                                  /* Ligne du haut du paragraphe */
+    padding-top: var( --spacing-4) ;                              /* Espacement entre la ligne et le paragraphe */
+    padding-bottom: var( --spacing-4);                            /* Espacement entre le paragraphe et les articles */
+    line-height: var( --spacing-4);
+}
+
+.article {
+    background-color: gray;                                    /* Visualisation du bloc général  */
+    list-style: none;
+}
+.article ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.articles {
+    list-style: none;   
+}
+
+article{
+    border: solid 2px black;
+}
+section img {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+{ 
     background-color: var(--light);
 }
 
