@@ -10,7 +10,13 @@ let i = 0; // variable d'itération de la boucle
 function navMenuExpand() {
     elementsMenu[elementMenuArray[i]].classList.toggle('hidden'); /* Si les éléments n'ont pas la classe hidden, l'ajoute sinon la retire */
 
+    if (elementsMenu[elementMenuArray[i]].classList[0] === "none") { /* Vérifie si les éléments ont la classe none */
+        for (let j = 0; j < elementMenuArray.length; j++) { /*  Boucle qui recommence pour tous les éléments*/
+            elementsMenu[elementMenuArray[j]].classList.remove('none'); /*  Retire la class none à tous les éléments*/
+        }
+    }
     if (i < (elementMenuArray.length) - 1) { // recommence tant qu'il reste des éléments
+
         i++; // Intération de la boucle
         setTimeout(navMenuExpand, 100) //Attend 1s avant de relancer la fonction.
     }
@@ -18,6 +24,13 @@ function navMenuExpand() {
         document.querySelector("#navButton").disabled = false; // Réactive le bouton
         elementMenuArray = elementMenuArray.reverse(); // Inverse le tableau des éléments
         i = 0; // Remet la boucle à zéro
+        if (elementsMenu[elementMenuArray[i]].classList[0] === "hidden") { /* Vérifie si les éléments ont la classe hidden */
+            setTimeout(function () { /*  Paramètre le délai avant de lancer la boucle*/
+                for (let i = 0; i < elementMenuArray.length; i++) {/*  Boucle qui recommence pour tous les éléments*/
+                    elementsMenu[elementMenuArray[i]].classList.add('none');/*  Ajoute la class none à tous les éléments*/
+                }
+            }, 200)
+        }
     }
 }
 

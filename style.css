@@ -23,7 +23,7 @@
     --title-font-size: 32pt;
 }
 
-/* Place le cercle au milieu de l'écran*/
+
 /* Police, taille et couleur de base sur tout le site */
 * {
     font-family: var(--main-font);
@@ -50,13 +50,35 @@ h2 {
     color: var(--dark);
 }
 
-footer h2 {
-    font-family: var(--secondaryTitle-font);
-    font-size: var(--secondaryTitle-size);
-    color: var(--main-color);
+/* ************* HEADER *************/
+header {
+    background-size: cover;
+    height: 100%;
+    margin: 1em;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
 }
 
-header {
+header::after {
+    content: "";
+    height: 62px;
+    width: 100%;
+    background: url(/assets/Arrow1.png) no-repeat;
+    margin-top: -1px;
+    background-position-x: center;
+}
+
+.titleGroup h1,
+.titleGroup h2 {
+    color: var(--light);
+    margin: var(--spacing);
+    height: auto;
+    text-shadow: 0px 5px 5px rgb(0, 0, 0);
+}
+
+
+.titleGroup {
     background: url(assets/banniere_mob.jpg) no-repeat center top;
     background-size: cover;
     height: 270px;
@@ -67,15 +89,72 @@ header {
     justify-content: center;
 }
 
+/* &&&&&&&&&&&&&&&&  MAIN  &&&&&&&&&&&&&&& */
 
-header h1,
-h2 {
-    color: var(--light);
-    margin: var(--spacing);
-    height: auto;
-    text-shadow: 0px 5px 5px rgba(0, 0, 0, 1);
+main {
+    width: 95%;
+    margin: auto;
 }
 
+section h1 {
+    font-family: 'Oswald', sans-serif;
+    /* Police titre principal */
+    font-size: var(--title-font-size);
+    /* Taille police titre principal */
+    text-align: center;
+    /* Centrer le titre */
+    padding-bottom: 5px;
+    /* Padding bas */
+
+}
+
+
+section p {
+    font-family: 'Raleway', sans-serif;
+    /* Police paragraphe */
+    font-size: var(--secondaryTitle-size);
+    /* Taille police paragraphe */
+    /* Ligne du haut du paragraphe */
+    padding-top: var(--spacing-4);
+    /* Espacement entre la ligne et le paragraphe */
+    padding-bottom: var(--spacing-4);
+    /* Espacement entre le paragraphe et les articles */
+    line-height: var(--spacing-4);
+}
+
+article {
+    border: solid 2px rgba(128, 128, 128, 0.096);
+    box-shadow: 3px 3px rgba(128, 128, 128, 0.11);
+
+}
+
+section img {
+    width: 100%;
+}
+
+article h2 {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    ;
+}
+
+
+/*
+{ 
+    background-color: var(--light);
+/* Police, taille et couleur de base sur tout le site */
+
+
+/* ************* FOOTER *************/
+footer {
+    margin-bottom: 200px;
+}
+
+footer h2 {
+    font-family: var(--secondaryTitle-font);
+    font-size: var(--secondaryTitle-size);
+    color: var(--main-color);
+}
 
 form {
     padding: 1em;
@@ -127,14 +206,6 @@ button {
 
 }
 
-/* modification de la ligne sous le formulaire contact */
-.footer_2 {
-    background-color: var(--main-color);
-    font-size: var(--text-font-size);
-    text-align: right;
-    font-weight: bold;
-    padding-top: var(--spacing-2);
-}
 
 /* modification de la couleur et de la taille des icones */
 i {
@@ -230,6 +301,10 @@ nav li:hover,
     /*  Paramètre la transition*/
 }
 
+#navList .none {
+    display: none;
+}
+
 #navList a img {
     margin: 5px;
     /*  Place les icones */
@@ -287,6 +362,7 @@ nav li:hover,
     height: 160px;
     /* Défini la hauteur */
     margin: auto;
+    /* Place le cercle au milieu de l'écran*/
 }
 
 .box p {
@@ -297,7 +373,7 @@ nav li:hover,
 }
 
 @media screen and (min-width: 600px) {
-    header {
+    .titleGroup {
         background: url(assets/banniere_web.jpg) no-repeat center top;
         background-size: cover;
         height: 350px;
