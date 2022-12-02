@@ -24,10 +24,11 @@
 }
 
 /* Police, taille et couleur de base sur tout le site */
-* {
+.form-input, p{
     font-family: var(--main-font);
     font-size: var(--text-font-size);
     color: var(--dark);
+    
 }
 
 body {
@@ -43,7 +44,7 @@ h1 {
 }
 
 /* Police, taille et couleur du H2 */
-h2 {
+.head-h2 {
     font-family: var(--secondaryTitle-font);
     font-size: var(--secondaryTitle-size);
     color: var(--dark);
@@ -66,15 +67,40 @@ header {
     justify-content: center;
 }
 
-
-header h1,
-h2 {
+.head-title {
     color: var(--light);
     margin: var(--spacing);
     height: auto;
     text-shadow: 0px 5px 5px rgba(0, 0, 0, 1);
 }
+/* page actualités */
+.act-titreH2 {
+    font-family: var(--secondaryTitle-font);
+    font-size: var(--secondaryTitle-size);
+    color: var(--main-color);
+    margin: var(--spacing);
+    height: auto;
+}
+.act-articleText {
+    text-align: justify;
+}
 
+article{
+    padding: 1em;
+    margin-top: var(--spacing-2);
+    margin-bottom: var(--spacing-2);
+    margin-left: var(--spacing);
+    margin-right: var(--spacing);
+    padding: 1em;
+    align-items: center;
+    border: 1px solid #CCC;
+    box-shadow: 0 0 5px grey;
+}
+
+.img_actu{
+    width: 100%;
+    margin-top: var(--spacing);
+}
 
 form {
     padding: 1em;
@@ -91,7 +117,6 @@ form {
     width: 100%;
     box-sizing: border-box;
     display: flex;
-
     justify-content: center;
 }
 
