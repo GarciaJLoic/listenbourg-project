@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://pbs.twimg.com/profile_banners/1586722811057422337/1667163176/1500x500" />
+    <!-- icones -->
+    <script src="https://kit.fontawesome.com/4d54641039.js" crossorigin="anonymous"></script>
+    <!-- Titre de la page -->
+    <title>Bienvenue au Listenbourg</title>
+</head>
+
+
+
+<body>
+
+    <!-- <header>-->
+
+    <header>
+        <div class="titleGroup">
+            <h1>Listenbourg</h1>
+            <h2>Le pays où il fait bon vivre !!!</h2>
+        </div>
+    </header>
+
+    <!-- &&&&&&&&&&&&&&&&&&  Section présentation  &&&&&&&&&&&&&&&&&&&&&-->
+    <main>
+        <section class="bienvenue">
+            <article>
+                <h1> Bienvenue au Listenbourg</h1>
+                <p>Croissant jelly beans wafer muffin croissant candy sweet. Apple pie pastry candy topping brownie
+                    chocolate pudding oat cake lemon drops. Brownie pudding ice cream sugar plum candy canes dragée
+                    apple pie. Marshmallow dragée pie lollipop pie muffin sesame snaps. Wafer toffee lemon drops gummies
+                    candy chocolate bar brownie. </p>
+            </article>
+        </section>
+
+        <!--  &&&&&&&&&&&&&&&&&&&& Section 2 Tourisme  &&&&&&&&&&&&&&&&&&&&&-->
+        <section class="tourisme">
+            <article>
+                <h2>Tourisme</h2>
+                <img src="/assets/article1.png" alt="Paysage">
+                <p>Croissant jelly beans wafer muffin croissant candy sweet. Apple pie pastry candy topping brownie
+                    chocolate pudding oat cake lemon drops. Brownie pudding ice cream sugar plum candy canes dragée
+                    apple pie. Marshmallow dragée pie lollipop pie muffin sesame snaps. Wafer toffee lemon drops gummies
+                    candy chocolate bar brownie.</p>
+            </article>
+        </section>
+
+        <section>
+            <article>
+                <h2>Histoire</h2>
+                <img src="/assets/article1.png" alt="Paysage">
+                <p>Croissant jelly beans wafer muffin croissant candy sweet. Apple pie pastry candy topping brownie
+                    chocolate pudding oat cake lemon drops. Brownie pudding ice cream sugar plum candy canes dragée
+                    apple pie. Marshmallow dragée pie lollipop pie muffin sesame snaps. Wafer toffee lemon drops gummies
+                    candy chocolate bar brownie.</p>
+            </article>
+        </section>
+    </main>
+
+    <!-- ****************FOOTER**************** -->
+
+    <footer>
+        <!-- Mise en place d'un formulaire contact -->
+        <form method="post" action="mailto:contact@welcomelistenbourg.com">
+            <h2> Contact</h2>
+            <p>Office du Tourisme situé à Lurenberg</p>
+            <!-- 3 champs obligatoires dans le formulaire - envoi par email -->
+            <div class="formu"><input type="text" id="name" name="user_name" placeholder="Nom Prénom" required>
+                <input type="email" id="mail" name="user_mail" placeholder="Email" required>
+            </div>
+            <textarea id="msg" name="user_message" placeholder="Message" required></textarea>
+
+            <div class="social">
+                <!-- renvoi dans une autre page et icones fontawesome dans le head-->
+
+                <div class="icon">
+                    <a target="_blank" href="https://www.facebook.com/WelcomeListenbourg"> <i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/WelcomeListenbourg"> <i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a target="_blank" href="https://www.twitter.com/WelcomeListenbourg"><i
+                            class="fa-brands fa-twitter"></i></a>
+                </div>
+
+                <button type="submit">Envoyer</button>
+
+            </div>
+        </form>
+        <!-- séparation de la ligne basse du footer -->
+        <!--
+        <div class="footer_2">
+            ©Dev&jerry’s / G3
+        </div> -->
+    </footer>
+
+
+    <!---- MENU DE NAVIGATION -->
+    <nav>
+        <ul id="navList">
+            <a class="hidden none" href="index.html">
+                <li><img src="/assets/iconePlanete.png" alt="Icone menu en forme planète"></li>
+            </a>
+            <a class="hidden none" href="index.html">
+                <li><img src="/assets/iconeTourisme.png" alt="Icone menu tourisme en forme d'appareil photo"></li>
+            </a>
+            <a class="hidden none" href="index.html">
+                <li><img src="/assets/iconeHistoire.png" alt="Icone menu histoire en forme de colone antique"></li>
+            </a>
+            <a class="hidden none" href="index.html">
+                <li><img class="iconeActu" src="/assets/iconeActualites.png"
+                        alt="Icone menu acutalité en forme d'article"></li>
+            </a>
+            <a class="hidden none" href="index.html">
+                <li><img src="/assets/iconeGallerie.png" alt="Icone menu gallerie photo en forme d'images"></li>
+            </a>
+            <button id="navButton"></button>
+            <a class="hidden none" href="index.html">
+                <li class="iconeActiv"><img src="/assets/iconeAccueil.png" alt="Icone menu accueil en forme de maison">
+                </li>
+            </a>
+        </ul>
+        <div class="box">
+            <div class="inBox">
+            </div>
+            <p> ©Dev&jerry’s / G3</p>
+        </div>
+    </nav>
+</body>
+
+
+<script src="main.js"></script>
+</body>
