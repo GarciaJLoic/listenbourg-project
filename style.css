@@ -24,7 +24,8 @@
 }
 
 /* Police, taille et couleur de base sur tout le site */
-.form-input, p{
+.form-input,
+p {
     font-family: var(--main-font);
     font-size: var(--text-font-size);
     color: var(--dark);
@@ -96,14 +97,16 @@ header::after {
     height: auto;
     text-shadow: 0px 5px 5px rgba(0, 0, 0, 1);
 }
+
 /* &&&&&&&&&&&&&&&&  MAIN  &&&&&&&&&&&&&&& */
 
 main {
     width: 95%;
     margin: auto;
 }
+
 /*** Accueil **/
-.bienvenue h1{
+.bienvenue h1 {
     color: var(--dark);
 }
 
@@ -115,11 +118,12 @@ main {
     margin: var(--spacing);
     height: auto;
 }
+
 .act-articleText {
     text-align: justify;
 }
 
-.articleActu{
+.articleActu {
     padding: 1em;
     margin-top: var(--spacing-2);
     margin-bottom: var(--spacing-2);
@@ -131,10 +135,11 @@ main {
     box-shadow: 0 0 5px grey;
 }
 
-.img_actu{
+.img_actu {
     width: 100%;
     margin-top: var(--spacing);
 }
+
 section h1 {
     font-family: 'Oswald', sans-serif;
     /* Police titre principal */
@@ -147,13 +152,17 @@ section h1 {
 
 }
 
-section p{
-    font-family:'Raleway', sans-serif;                            /* Police paragraphe */
-    font-size:  var(--secondaryTitle-size);                       /* Taille police paragraphe */
-                                                                  /* Ligne du haut du paragraphe */
-    padding-top: var( --spacing-4) ;                              /* Espacement entre la ligne et le paragraphe */
-    padding-bottom: var( --spacing-4);                            /* Espacement entre le paragraphe et les articles */
-    line-height: var( --spacing-4);
+section p {
+    font-family: 'Raleway', sans-serif;
+    /* Police paragraphe */
+    font-size: var(--secondaryTitle-size);
+    /* Taille police paragraphe */
+    /* Ligne du haut du paragraphe */
+    padding-top: var(--spacing-4);
+    /* Espacement entre la ligne et le paragraphe */
+    padding-bottom: var(--spacing-4);
+    /* Espacement entre le paragraphe et les articles */
+    line-height: var(--spacing-4);
     width: 80%;
     padding-left: 40px;
     padding-right: 40px;
@@ -162,19 +171,22 @@ section p{
 .index article {
     border: solid 2px rgba(128, 128, 128, 0.096);
     box-shadow: 3px 3px rgba(128, 128, 128, 0.11);
-    margin-bottom: 25px;                                           /* Espacement entre les articles */
-   
-}
-    
-section img {                                                   /* Reglage des images articles */
-    width: 80%;
-    padding-left: 40px;
-    padding-right: 40px; 
+    margin-bottom: 25px;
+    /* Espacement entre les articles */
+
 }
 
-.articleActu img {                                                   /* Reglage des images articles */
+section img {
+    /* Reglage des images articles */
+    width: 80%;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.articleActu img {
+    /* Reglage des images articles */
     padding-left: 0px;
-    padding-right: 0px; 
+    padding-right: 0px;
 }
 
 article h2 {
@@ -287,7 +299,7 @@ nav ul {
     /* Supprime le padding par défaut */
     position: relative;
     /* position l'élément de façon relative pour permettre déplacer plus facilement */
-    top: 65px;
+    top: 70px;
     /* Le déplace vers le bas */
     z-index: 1;
     /* Permet à l'élément d'être au premier plan */
