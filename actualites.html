@@ -15,12 +15,15 @@
 </head>
 
 <body>
-    <header>
-        <h1 class="head-title">Listenbourg</h1>
-        <h2 class="head-title head-h2">Le pays où il fait bon vivre !!!</h2>
-    </header>
-    <section class="divactualites">
-        <article>
+      <!-- <header>-->
+        <header>
+            <div class="titleGroup">
+            <h1 class="head-title">Listenbourg</h1>
+            <h2 class="head-title">Le pays où il fait bon vivre !!!</h2>
+            </div>
+        </header>
+    <section>
+        <article class="articleActu">
             <h2 class="act-titreH2">
                 Gummi bears brownie
             </h2>
@@ -29,7 +32,7 @@
                 Tiramisu fruitcake danish cupcake topping chocolate cake candy. Muffin chupa chups candy canes icing wafer liquorice. Lemon drops candy gingerbread gummies sesame snaps. Sesame snaps tootsie roll sugar plum cookie chocolate bar lollipop toffee. Toffee cake fruitcake wafer caramels marzipan. Topping chocolate bar liquorice lollipop gummies chocolate cake. Gummi bears shortbread oat cake pastry jelly-o brownie jelly-o jujubes. Wafer candy canes toffee wafer apple pie chocolate fruitcake. Jelly topping shortbread brownie pie. Tootsie roll gingerbread croissant donut ice cream cookie cheesecake muffin bonbon. Gummies apple pie muffin
             </p>
         </article>
-        <article>
+        <article class="articleActu">
             <h2 class="act-titreH2">
                 Cupcake topping chocolate
             </h2>
@@ -38,7 +41,7 @@
                 Tiramisu fruitcake danish cupcake topping chocolate cake candy. Muffin chupa chups candy canes icing wafer liquorice. Lemon drops candy gingerbread gummies sesame snaps. Sesame snaps tootsie roll sugar plum cookie chocolate bar lollipop toffee. Toffee cake fruitcake wafer caramels marzipan. Topping chocolate bar liquorice lollipop gummies chocolate cake. Gummi bears shortbread oat cake pastry jelly-o brownie jelly-o jujubes. Wafer candy canes toffee wafer apple pie chocolate fruitcake. Jelly topping shortbread brownie pie. Tootsie roll gingerbread croissant donut ice cream cookie cheesecake muffin bonbon. Gummies apple pie muffin
             </p>
         </article>
-        <article>
+        <article class="articleActu">
             <h2 class="act-titreH2">
                 Chupa chups candy
             </h2>
@@ -47,7 +50,7 @@
                 Tiramisu fruitcake danish cupcake topping chocolate cake candy. Muffin chupa chups candy canes icing wafer liquorice. Lemon drops candy gingerbread gummies sesame snaps. Sesame snaps tootsie roll sugar plum cookie chocolate bar lollipop toffee. Toffee cake fruitcake wafer caramels marzipan. Topping chocolate bar liquorice lollipop gummies chocolate cake. Gummi bears shortbread oat cake pastry jelly-o brownie jelly-o jujubes. Wafer candy canes toffee wafer apple pie chocolate fruitcake. Jelly topping shortbread brownie pie. Tootsie roll gingerbread croissant donut ice cream cookie cheesecake muffin bonbon. Gummies apple pie muffin
             </p>
         </article>
-        <article>
+        <article class="articleActu">
             <h2 class="act-titreH2">
                 Lemon drops
             </h2>
@@ -57,18 +60,19 @@
             </p>
         </article>
     </section>
+ 
     <!-- ****************FOOTER**************** -->
+
     <footer>
         <!-- Mise en place d'un formulaire contact -->
         <form method="post" action="mailto:contact@welcomelistenbourg.com">
             <h2> Contact</h2>
             <p>Office du Tourisme situé à Lurenberg</p>
             <!-- 3 champs obligatoires dans le formulaire - envoi par email -->
-            <div class="formu">
-                <input type="text" class="form-input" id="name" name="user_name" placeholder="Nom Prénom" required>
-                <input type="email" class="form-input" id="mail" name="user_mail" placeholder="Email" required>
+            <div class="formu"><input type="text" id="name" name="user_name" placeholder="Nom Prénom" required>
+                <input type="email" id="mail" name="user_mail" placeholder="Email" required>
             </div>
-            <textarea id="msg" class="form-input" name="user_message" placeholder="Message" required></textarea>
+            <textarea id="msg" name="user_message" placeholder="Message" required></textarea>
 
             <div class="social">
                 <!-- renvoi dans une autre page et icones fontawesome dans le head-->
@@ -87,12 +91,45 @@
             </div>
         </form>
         <!-- séparation de la ligne basse du footer -->
+        <!--
         <div class="footer_2">
             ©Dev&jerry’s / G3
-        </div>
+        </div> -->
     </footer>
 
 
+    <!---- MENU DE NAVIGATION -->
+    <nav>
+        <ul id="navList">
+            <a class="hidden none" href="index.html">
+                <li><img src="/assets/iconePlanete.png" alt="Icone menu en forme planète"></li>
+            </a>
+            <a class="hidden none" href="index.html">
+                <li><img src="/assets/iconeTourisme.png" alt="Icone menu tourisme en forme d'appareil photo"></li>
+            </a>
+            <a class="hidden none" href="index.html">
+                <li><img src="/assets/iconeHistoire.png" alt="Icone menu histoire en forme de colone antique"></li>
+            </a>
+            <a class="hidden none" href="actualites.html">
+                <li><img class="iconeActu" src="/assets/iconeActualites.png"
+                        alt="Icone menu acutalité en forme d'article"></li>
+            </a>
+            <a class="hidden none" href="index.html">
+                <li><img src="/assets/iconeGallerie.png" alt="Icone menu gallerie photo en forme d'images"></li>
+            </a>
+            <button id="navButton"></button>
+            <a class="hidden none" href="index.html">
+                <li class="iconeActiv"><img src="/assets/iconeAccueil.png" alt="Icone menu accueil en forme de maison">
+                </li>
+            </a>
+        </ul>
+        <div class="box">
+            <div class="inBox">
+            </div>
+            <p> ©Dev&jerry’s / G3</p>
+        </div>
+    </nav>
 </body>
 
+<script src="main.js"></script>
 </html>

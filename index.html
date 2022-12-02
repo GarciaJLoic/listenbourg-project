@@ -14,14 +14,57 @@
     <title>Bienvenue au Listenbourg</title>
 </head>
 
+
+
 <body>
+
+    <!-- <header>-->
+
     <header>
+        <div class="titleGroup">
         <h1 class="head-title">Listenbourg</h1>
         <h2 class="head-title">Le pays où il fait bon vivre !!!</h2>
+        </div>
     </header>
 
+    <!-- &&&&&&&&&&&&&&&&&&  Section présentation  &&&&&&&&&&&&&&&&&&&&&-->
+    <main class="index">
+        <section class="bienvenue">
+            <article>
+                <h1> Bienvenue au Listenbourg</h1>
+                <p>Croissant jelly beans wafer muffin croissant candy sweet. Apple pie pastry candy topping brownie
+                    chocolate pudding oat cake lemon drops. Brownie pudding ice cream sugar plum candy canes dragée
+                    apple pie. Marshmallow dragée pie lollipop pie muffin sesame snaps. Wafer toffee lemon drops gummies
+                    candy chocolate bar brownie. </p>
+            </article>
+        </section>
+
+        <!--  &&&&&&&&&&&&&&&&&&&& Section 2 Tourisme  &&&&&&&&&&&&&&&&&&&&&-->
+        <section class="tourisme">
+            <article>
+                <h2>Tourisme</h2>
+                <img src="/assets/article1.png" alt="Paysage">
+                <p>Croissant jelly beans wafer muffin croissant candy sweet. Apple pie pastry candy topping brownie
+                    chocolate pudding oat cake lemon drops. Brownie pudding ice cream sugar plum candy canes dragée
+                    apple pie. Marshmallow dragée pie lollipop pie muffin sesame snaps. Wafer toffee lemon drops gummies
+                    candy chocolate bar brownie.</p>
+            </article>
+        </section>
+
+        <section>
+            <article>
+                <h2>Histoire</h2>
+                <img src="/assets/article1.png" alt="Paysage">
+                <p>Croissant jelly beans wafer muffin croissant candy sweet. Apple pie pastry candy topping brownie
+                    chocolate pudding oat cake lemon drops. Brownie pudding ice cream sugar plum candy canes dragée
+                    apple pie. Marshmallow dragée pie lollipop pie muffin sesame snaps. Wafer toffee lemon drops gummies
+                    candy chocolate bar brownie.</p>
+            </article>
+        </section>
+    </main>
 
     <!-- ****************FOOTER**************** -->
+
     <footer>
         <!-- Mise en place d'un formulaire contact -->
         <form method="post" action="mailto:contact@welcomelistenbourg.com">
@@ -50,12 +93,46 @@
             </div>
         </form>
         <!-- séparation de la ligne basse du footer -->
+        <!--
         <div class="footer_2">
             ©Dev&jerry’s / G3
-        </div>
+        </div> -->
     </footer>
 
 
+    <!---- MENU DE NAVIGATION -->
+    <nav>
+        <ul id="navList">
+            <a class="hidden none" href="index.html">
+                <li><img src="/assets/iconePlanete.png" alt="Icone menu en forme planete"></li>
+            </a>
+            <a class="hidden none" href="index.html">
+                <li><img src="/assets/iconeTourisme.png" alt="Icone menu tourisme en forme d'appareil photo"></li>
+            </a>
+            <a class="hidden none" href="index.html">
+                <li><img src="/assets/iconeHistoire.png" alt="Icone menu histoire en forme de colone antique"></li>
+            </a>
+            <a class="hidden none" href="actualites.html">
+                <li><img class="iconeActu" src="/assets/iconeActualites.png"
+                        alt="Icone menu acutalité en forme d'article"></li>
+            </a>
+            <a class="hidden none" href="index.html">
+                <li><img src="/assets/iconeGallerie.png" alt="Icone menu gallerie photo en forme d'images"></li>
+            </a>
+            <button id="navButton"></button>
+            <a class="hidden none" href="index.html">
+                <li class="iconeActiv"><img src="/assets/iconeAccueil.png" alt="Icone menu accueil en forme de maison">
+                </li>
+            </a>
+        </ul>
+        <div class="box">
+            <div class="inBox">
+            </div>
+            <p> ©Dev&jerry’s / G3</p>
+        </div>
+    </nav>
 </body>
 
-</html>
+
+<script src="main.js"></script>
+</body>
