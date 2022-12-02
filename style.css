@@ -5,7 +5,7 @@
     /* ************Colors************ */
     --main-color: #AD2C40;
     --secondary-color: #415271;
-    --dark: white;
+    --light: white;
     --dark: black;
     /* ************spacing************ */
     --spacing: 8px;
@@ -23,10 +23,16 @@
     --title-font-size: 32pt;
 }
 
+/* Police, taille et couleur de base sur tout le site */
+.form-input, p{
+    font-family: var(--main-font);
+    font-size: var(--text-font-size);
+    color: var(--dark);
+}
 
 /* Police, taille et couleur de base sur tout le site */
 
- body {
+body {
     margin: 0;
     padding: 0;
 }
@@ -39,7 +45,7 @@ h1 {
 }
 
 /* Police, taille et couleur du H2 */
-h2 {
+.head-h2 {
     font-family: var(--secondaryTitle-font);
     font-size: var(--secondaryTitle-size);
     color: var(--dark);
@@ -49,7 +55,6 @@ h2 {
 header {
     background-size: cover;
     height: 100%;
-    margin: 1em;
     display: flex;
     text-align: center;
     flex-direction: column;
@@ -84,13 +89,52 @@ header::after {
     justify-content: center;
 }
 
+
+.head-title {
+    color: var(--light);
+    margin: var(--spacing);
+    height: auto;
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 1);
+}
 /* &&&&&&&&&&&&&&&&  MAIN  &&&&&&&&&&&&&&& */
 
 main {
     width: 95%;
     margin: auto;
 }
+/*** Accueil **/
+.bienvenue h1{
+    color: var(--dark);
+}
 
+/* page actualités */
+.act-titreH2 {
+    font-family: var(--secondaryTitle-font);
+    font-size: var(--secondaryTitle-size);
+    color: var(--main-color);
+    margin: var(--spacing);
+    height: auto;
+}
+.act-articleText {
+    text-align: justify;
+}
+
+.articleActu{
+    padding: 1em;
+    margin-top: var(--spacing-2);
+    margin-bottom: var(--spacing-2);
+    margin-left: var(--spacing);
+    margin-right: var(--spacing);
+    padding: 1em;
+    align-items: center;
+    border: 1px solid #CCC;
+    box-shadow: 0 0 5px grey;
+}
+
+.img_actu{
+    width: 100%;
+    margin-top: var(--spacing);
+}
 section h1 {
     font-family: 'Oswald', sans-serif;
     /* Police titre principal */
@@ -102,7 +146,6 @@ section h1 {
     /* Padding bas */
 
 }
-
 
 section p{
     font-family:'Raleway', sans-serif;                            /* Police paragraphe */
@@ -116,7 +159,7 @@ section p{
     padding-right: 40px;
 }
 
-article {
+.index article {
     border: solid 2px rgba(128, 128, 128, 0.096);
     box-shadow: 3px 3px rgba(128, 128, 128, 0.11);
     margin-bottom: 25px;                                           /* Espacement entre les articles */
@@ -126,7 +169,12 @@ article {
 section img {                                                   /* Reglage des images articles */
     width: 80%;
     padding-left: 40px;
-    padding-right: 40px;
+    padding-right: 40px; 
+}
+
+.articleActu img {                                                   /* Reglage des images articles */
+    padding-left: 0px;
+    padding-right: 0px; 
 }
 
 article h2 {
@@ -144,7 +192,7 @@ article h2 {
 
 /* ************* FOOTER *************/
 footer {
-    margin-bottom: 200px;
+    margin-bottom: 180px;
 }
 
 footer h2 {
@@ -168,7 +216,6 @@ form {
     width: 100%;
     box-sizing: border-box;
     display: flex;
-
     justify-content: center;
 }
 
@@ -202,7 +249,6 @@ button {
 
 
 }
-
 
 /* modification de la couleur et de la taille des icones */
 i {
