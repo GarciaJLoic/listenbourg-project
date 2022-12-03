@@ -71,10 +71,11 @@
             <h2> Contact</h2>
             <p>Office du Tourisme situé à Lurenberg</p>
             <!-- 3 champs obligatoires dans le formulaire - envoi par email -->
-            <div class="formu"><input type="text" id="name" name="user_name" placeholder="Nom Prénom" required>
-                <input type="email" id="mail" name="user_mail" placeholder="Email" required>
+            <div class="formu">
+                <input class="form-input" type="text" id="name" name="user_name" placeholder="Nom Prénom" required>
+                <input class="form-input" type="email" id="mail" name="user_mail" placeholder="Email" required>
             </div>
-            <textarea id="msg" name="user_message" placeholder="Message" required></textarea>
+            <textarea id="msg" class="form-input" name="user_message" placeholder="Message" required></textarea>
 
             <div class="social">
                 <!-- renvoi dans une autre page et icones fontawesome dans le head-->
@@ -93,17 +94,13 @@
             </div>
         </form>
         <!-- séparation de la ligne basse du footer -->
-        <!--
-        <div class="footer_2">
-            ©Dev&jerry’s / G3
-        </div> -->
     </footer>
 
 
     <!---- MENU DE NAVIGATION -->
     <nav>
         <ul id="navList">
-            <a class="hidden none" href="index.html">
+            <a class="hidden none" href="presentation.html">
                 <li><img src="/assets/iconePlanete.png" alt="Icone menu en forme planete"></li>
             </a>
             <a class="hidden none" href="index.html">

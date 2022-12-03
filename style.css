@@ -31,8 +31,6 @@ p {
     color: var(--dark);
 }
 
-/* Police, taille et couleur de base sur tout le site */
-
 body {
     margin: 0;
     padding: 0;
@@ -192,15 +190,7 @@ section img {
 article h2 {
     text-align: center;
     font-family: 'Raleway', sans-serif;
-    ;
 }
-
-
-/*
-{ 
-    background-color: var(--light);
-/* Police, taille et couleur de base sur tout le site */
-
 
 /* ************* FOOTER *************/
 footer {
@@ -253,13 +243,28 @@ button {
     font-weight: bold;
 }
 
+/* &&&&&&&&&&&&  presentation  &&&&&&&&&&&&&&& */
+
+.article_presentation {
+    display: flex;
+    align-items: center;
+}
+
+.miniature {
+    height: 150px;
+    width: 150px;
+    margin: 5px;
+}
+
+.miniature-p {
+    font-size: 12pt;
+}
+
 /* mise en place d'un flex pour mettre en page les icones et le bouton envoyer */
 .social {
     display: flex;
     justify-content: space-between;
     width: 100%;
-
-
 }
 
 /* modification de la couleur et de la taille des icones */
@@ -304,7 +309,6 @@ nav ul {
     z-index: 1;
     /* Permet à l'élément d'être au premier plan */
 }
-
 
 nav li {
     list-style-type: none;
