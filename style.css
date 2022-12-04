@@ -242,9 +242,14 @@ nav ul {
     /* Centre les éléments selon l'axe principal */
     padding: 0;
     /* Supprime le padding par défaut */
+    /* *********************
     position: relative;
-    /* position l'élément de façon relative pour permettre déplacer plus facilement */
+    /* position l'élément de façon relative pour permettre déplacer plus facilement 
     top: 65px;
+    ***************************/
+    position: absolute;
+    bottom: 0;
+    margin: 7px;
     /* Le déplace vers le bas */
     z-index: 1;
     /* Permet à l'élément d'être au premier plan */
@@ -302,20 +307,30 @@ nav li:hover,
 }
 
 #navList .none {
-    display: none;
+    position: absolute;
 }
 
-#navList a img {
+#navList a img,
+#navList a i {
     margin: 5px;
     /*  Place les icones */
     width: 40px;
     /* Défini la taille des icones  */
+    height: 40px;
+}
+
+#navList li {
+    vertical-align: top;
 }
 
 #navList .iconeActu {
     /* Correction de la position et de la taille d'un icone */
     width: 36px;
     margin: 2px 7px;
+}
+
+span.fa-stack {
+    width: 4.65em;
 }
 
 #navButton {
