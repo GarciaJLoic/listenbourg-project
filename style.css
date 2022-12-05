@@ -206,7 +206,6 @@ article h2 {
 
 .frise {
     width: 45px;
-    height: 920px;
     border: solid 1px var(--main-color);
     padding: 1em 0em;
     list-style: none;
@@ -216,6 +215,14 @@ article h2 {
 .frise li {
     text-align: center;
     width: 100px;
+}
+
+.evenements li {
+    flex-direction: column;
+}
+
+.evenements li img {
+    margin: 10px 0;
 }
 
 .histoire li {
@@ -229,35 +236,33 @@ article h2 {
 }
 
 .histoire li:nth-child(2) {
-    margin-top: calc(var(--spacing)*4);
+    margin-top: 270px;
 }
 
 .histoire li:nth-child(3) {
-    margin-top: calc(var(--spacing)*9);
+    margin-top: 300px;
 }
 
 .histoire li:nth-child(4) {
-    margin-top: calc(var(--spacing)*8)
+    margin-top: 300px;
 }
 
 .histoire li:nth-child(5) {
-    margin-top: calc(var(--spacing)*3);
+    margin-top: 260px;
 }
 
 .histoire li:nth-child(6) {
-    margin-top: calc(var(--spacing)*5);
+    margin-top: 280px;
 }
 
 .histoire li:nth-child(7) {
-    margin-top: calc(var(--spacing)*3);
+    margin-top: 220px;
+
 }
 
 .histoire li:nth-child(8) {
-    margin-top: calc(var(--spacing)*3);
-}
-
-.histoire li:nth-child(9) {
-    margin-top: calc(var(--spacing)*3);
+    margin-top: 310px;
+    margin-bottom: 180px;
 }
 
 .frise time {
@@ -293,7 +298,17 @@ article h2 {
     margin: 1em 0em;
 }
 
+.imgClick {}
 
+li img.imgAfterClick {
+    position: absolute;
+    padding: 0;
+    left: 0;
+    width: 90%;
+    border: 5px solid #CCC;
+    box-shadow: 0 0 5px grey;
+    margin: 0% 4%;
+}
 
 
 
