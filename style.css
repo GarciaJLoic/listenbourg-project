@@ -222,6 +222,7 @@ form {
     align-items: center;
     margin-left: var(--spacing);
     margin-right: var(--spacing);
+    font-size: var(--text-font-size);
 }
 
 .formu {
