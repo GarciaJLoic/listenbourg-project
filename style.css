@@ -26,6 +26,7 @@
 /* Police, taille et couleur de base sur tout le site */
 .form-input,
 p {
+    text-align: justify;
     font-family: var(--main-font);
     font-size: var(--text-font-size);
     color: var(--dark);
@@ -258,6 +259,16 @@ button {
 
 .miniature-p {
     font-size: 12pt;
+}
+
+.tableau_regions {
+    font-family: var(--main-font);
+    font-size: var(--secondaryTitle-size);
+    color: var(--dark);
+}
+
+.tableau_regions li {
+    margin-left: 20px;
 }
 
 /* mise en place d'un flex pour mettre en page les icones et le bouton envoyer */
