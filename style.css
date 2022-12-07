@@ -92,47 +92,53 @@ main {
 }
 
 section h1 {
-    font-family: 'Oswald', sans-serif;
-    /* Police titre principal */
-    font-size: var(--title-font-size);
-    /* Taille police titre principal */
-    text-align: center;
-    /* Centrer le titre */
-    padding-bottom: 5px;
-    /* Padding bas */
-
+    font-family: 'Oswald', sans-serif; /* Police titre principal */  
+    font-size: var(--title-font-size);/* Taille police titre principal */    
+    text-align: center; /* Centrer le titre */
+    padding-bottom: 5px;/* Padding bas */
 }
 
 
 section p{
     font-family:'Raleway', sans-serif;                            /* Police paragraphe */
     font-size:  var(--secondaryTitle-size);                       /* Taille police paragraphe */
-                                                                  /* Ligne du haut du paragraphe */
     padding-top: var( --spacing-4) ;                              /* Espacement entre la ligne et le paragraphe */
-    padding-bottom: var( --spacing-4);                            /* Espacement entre le paragraphe et les articles */
+    padding-bottom: var( --spacing-4);                            /* Ligne du haut du paragraphe */                  
     line-height: var( --spacing-4);
     width: 80%;
     padding-left: 40px;
     padding-right: 40px;
+    text-align: center;
 }
 
 article {
     border: solid 2px rgba(128, 128, 128, 0.096);
     box-shadow: 3px 3px rgba(128, 128, 128, 0.11);
     margin-bottom: 25px;                                           /* Espacement entre les articles */
-   
+}
+
+article img {                                /* Taille et margin des images */    
+    margin: 10px 45px 10px 45px;
+    width: 80%;
 }
     
-section img {                                                   /* Reglage des images articles */
-    width: 80%;
-    padding-left: 40px;
-    padding-right: 40px;
-}
 
 article h2 {
     text-align: center;
-    font-family: 'Raleway', sans-serif;
-    ;
+    font-family: 'Raleway', 'sans-serif';
+}
+
+
+                                     /* &&&&&&&&&&&&&&  IMAGES END   &&&&&&&&&&&&&&&&&& */
+
+.cadre img{
+    width: 60%;
+    margin: 20px 45px 10px 90px;  
+}
+
+a:hover {
+   color: blueviolet;
+   text-decoration: none;
 }
 
 
