@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://pbs.twimg.com/profile_banners/1586722811057422337/1667163176/1500x500" />
+    <!-- icones -->
+    <script src="https://kit.fontawesome.com/4d54641039.js" crossorigin="anonymous"></script>
+    <!-- Titre de la page -->
+    <title>Bienvenue au Listenbourg</title>
+</head>
+
+
+
+<body>
+
+    <!-- <header>-->
+
+    <header>
+        <div class="titleGroup">
+            <h1 class="head-title">Listenbourg</h1>
+            <h2 class="head-title">Le pays où il fait bon vivre !!!</h2>
+        </div>
+    </header>
+
+
+    <!-- &&&&&&&&&&&&&&&&&& Galerie Photos   &&&&&&&&&&&&&&&&&& -->
+
+    <main class="index">
+        <section class="bienvenue">
+            <article>
+                <h1> Les plus belles photos du Listenbourg</h1>
+            </article>
+        </section>
+
+        <div class="Galery">
+            <div id="popup-bg">
+                <div id="popup-content">
+                    <div id="popup-close">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                    </div>
+                    <img id="popup-img" src="#" alt="" />
+                </div>
+            </div>
+
+            <div id="grid">
+                <!-- (div.grid-item#photo-$>img.grid-img)*16 -->
+                <div class="grid-item" id="photoGalery-1"><a href="#popup-content"></a><img
+                        src="./galery/photoGalery-1.jpg" alt="1" class="grid-img">
+                </div>
+                <div class="grid-item" id="photoGalery-2"><a href="#popup-content"></a><img
+                        src="./galery/photoGalery-2.jpg" alt="2" class="grid-img">
+                </div>
+                <div class="grid-item" id="photoGalery-3"><a href="#popup-content"></a><img
+                        src="./galery/photoGalery-3.jpg" alt="3" class="grid-img">
+                </div>
+                <div class="grid-item" id="photoGalery-4"><a href="#popup-content"></a><img
+                        src="./galery/photoGalery-4.jpg" alt="4" class="grid-img">
+                </div>
+                <div class="grid-item" id="photoGalery-5"><a href="#popup-content"></a><img
+                        src="./galery/photoGalery-5.jpg" alt="5" class="grid-img">
+                </div>
+                <div class="grid-item" id="photoGalery-6"><a href="#popup-content"></a><img
+                        src="./galery/photoGalery-6.jpg" alt="6" class="grid-img">
+                </div>
+                <div class="grid-item" id="photoGalery-7"><a href="#popup-content"><img src="./galery/photoGalery-7.jpg"
+                            alt="7" class="grid-img"></a>
+                </div>
+                <div class="grid-item" id="photoGalery-8"><a href="#popup-content"><img src="./galery/photoGalery-8.jpg"
+                            alt="8" class="grid-img"></a>
+                </div>
+                <div class="grid-item" id="photoGalery-9"><a href="#popup-content"><img src="./galery/photoGalery-9.jpg"
+                            alt="9" class="grid-img"></a>
+                </div>
+                <div class="grid-item" id="photoGalery-10"><a href="#popup-content"><img
+                            src="./galery/photoGalery-10.jpg" alt="10" class="grid-img"></a>
+                </div>
+                <div class="grid-item" id="photoGalery-11"><a href="#popup-content"><img
+                            src="./galery/photoGalery-11.jpg" alt="11" class="grid-img"></a>
+                </div>
+                <div class="grid-item" id="photoGalery-12"><a href="#popup-content"><img
+                            src="./galery/photoGalery-12.jpg" alt="12" class="grid-img"></a>
+                </div>
+                <div class="grid-item" id="photoGalery-13"><a href="#popup-content"><img
+                            src="./galery/photoGalery-13.jpg" alt="13" class="grid-img"></a>
+                </div>
+                <div class="grid-item" id="photoGalery-14"><a href="#popup-content"><img
+                            src="./galery/photoGalery-14.jpg" alt="14" class="grid-img"></a>
+                </div>
+                <div class="grid-item" id="photoGalery-15"><a href="#popup-content"><img
+                            src="./galery/photoGalery-15.jpg" alt="15" class="grid-img"></a>
+                </div>
+                <div class="grid-item" id="photoGalery-16"><a href="#popup-content"> <img
+                            src="./galery/photoGalery-16.jpg" alt="16" class="grid-img"></a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ****************FOOTER**************** -->
+
+        <footer>
+            <!-- Mise en place d'un formulaire contact -->
+            <div class="footer1">
+                <form method="post" action="mailto:contact@welcomelistenbourg.com">
+                    <h2> Contact</h2>
+                    <p>Office du Tourisme situé à Lurenberg</p>
+                    <!-- 3 champs obligatoires dans le formulaire - envoi par email -->
+                    <div class="formu"><input type="text" id="name" name="user_name" placeholder="Nom Prénom" required>
+                        <input type="email" id="mail" name="user_mail" placeholder="Email" required>
+                    </div>
+                    <textarea id="msg" name="user_message" placeholder="Message" required></textarea>
+
+                    <button type="submit">Envoyer</button>
+
+                </form>
+                <div class="social">
+                    <div id="socialTitle">
+                        <h2>Suivez-nous</h2>
+                    </div>
+                    <!-- renvoi dans une autre page et icones fontawesome dans le head-->
+                    <div class="icon">
+                        <a target="_blank" href="https://www.facebook.com/WelcomeListenbourg"> <i
+                                class="fa-brands fa-facebook"></i></a>
+                        <a target="_blank" href="https://www.instagram.com/WelcomeListenbourg"> <i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a target="_blank" href="https://www.twitter.com/WelcomeListenbourg"><i
+                                class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+
+        </footer>
+
+
+        <!---- MENU DE NAVIGATION -->
+        <nav>
+            <ul id="navList">
+                <a class="hidden none" href="index.html">
+                    <li><img src="/assets/iconePlanete.png" alt="Icone menu en forme planete"></li>
+                </a>
+                <a class="hidden none" href="index.html">
+                    <li><img src="/assets/iconeTourisme.png" alt="Icone menu tourisme en forme d'appareil photo">
+                    </li>
+                </a>
+                <a class="hidden none" href="index.html">
+                    <li><img src="/assets/iconeHistoire.png" alt="Icone menu histoire en forme de colone antique">
+                    </li>
+                </a>
+                <a class="hidden none" href="actualites.html">
+                    <li><img class="iconeActu" src="/assets/iconeActualites.png"
+                            alt="Icone menu acutalité en forme d'article"></li>
+                </a>
+                <a class="hidden none" href="galery.html">
+                    <li><img src="/assets/iconeGallerie.png" alt="Icone menu gallerie photo en forme d'images"></li>
+                </a>
+                <button id="navButton"></button>
+                <a class="hidden none" href="index.html">
+                    <li class="iconeActiv"><img src="/assets/iconeAccueil.png"
+                            alt="Icone menu accueil en forme de maison">
+                    </li>
+                </a>
+            </ul>
+            <div class="box">
+                <div class="inBox">
+                </div>
+                <p> ©Dev&jerry’s / G3</p>
+            </div>
+        </nav>
+        <script src="main.js"></script>
+
+</body>
+
+</html>
