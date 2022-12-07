@@ -61,3 +61,19 @@ allGridItems.forEach((el) => el.addEventListener("click", openPopup));
 
 popupImg.addEventListener("click", (e) => e.stopPropagation());
 popupBg.addEventListener("click", closePopup);
+
+
+/* ******************************* */
+/* FUNCTION  IMAGE CLIC   /
+/* *****************************/
+
+
+
+const element = document.getElementsByClassName("imgClick") // Cible les éléments qui ont pour classe imgClick
+for (let i = 0; i < element.length; i++) { // Boucle qui recommence tant qu'il reste des éléments 
+    element[i].onclick = function () { // Active la fonction lors du clic du bouton
+        element[i].classList.toggle("imgAfterClick") // Si l'élément possède la classe imgAfterClick la retire, sinon l'ajoute
+    }
+}
+
+
