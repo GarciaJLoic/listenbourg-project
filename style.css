@@ -139,7 +139,7 @@ main {
     margin-top: var(--spacing);
 }
 
-section h1 {
+.index section h1 {
     font-family: 'Oswald', sans-serif;
     /* Police titre principal */
     font-size: var(--title-font-size);
@@ -151,7 +151,8 @@ section h1 {
 
 }
 
-section p {
+.index section p,
+.tourisme section p {
     font-family: 'Raleway', sans-serif;
     /* Police paragraphe */
     font-size: var(--secondaryTitle-size);
@@ -192,6 +193,125 @@ article h2 {
     text-align: center;
     font-family: 'Raleway', sans-serif;
 }
+
+/* ******************************************/
+/* ************* PAGE HISTOIRE*************/
+/* ***************************************/
+
+.histoire section {
+    padding: 1em;
+    border: 1px solid #CCC;
+    box-shadow: 0 0 5px grey;
+    display: flex;
+    font-size: var(--text-font-size);
+}
+
+.frise {
+    width: 45px;
+    border: solid 1px var(--main-color);
+    padding: 1em 0em;
+    list-style: none;
+    margin-right: calc(var(--spacing-4)* 1.7);
+}
+
+.frise li {
+    text-align: center;
+    width: 100px;
+}
+
+.evenements li {
+    flex-direction: column;
+}
+
+.evenements li img {
+    margin: 10px 0;
+}
+
+.histoire li {
+    height: 65px;
+    display: flex;
+    align-items: center;
+}
+
+.histoire li:nth-child(1) {
+    margin-top: calc(var(--spacing)*2);
+}
+
+.histoire li:nth-child(2) {
+    margin-top: 350px;
+}
+
+.histoire li:nth-child(3) {
+    margin-top: 300px;
+}
+
+.histoire li:nth-child(4) {
+    margin-top: 300px;
+}
+
+.histoire li:nth-child(5) {
+    margin-top: 260px;
+}
+
+.histoire li:nth-child(6) {
+    margin-top: 280px;
+}
+
+.histoire li:nth-child(7) {
+    margin-top: 220px;
+
+}
+
+.histoire li:nth-child(8) {
+    margin-top: 310px;
+    margin-bottom: 180px;
+}
+
+.frise time {
+    width: 45px;
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+
+.frise li::after {
+    content: "";
+    height: 23px;
+    width: 50px;
+    background: url(/assets/Arrow2.png) no-repeat;
+    display: block;
+    background-size: contain;
+}
+
+.friseDeco {
+    width: calc(var(--spacing-4)* 4);
+    height: 500px;
+    padding: 1em 0.2em;
+}
+
+.evenements {
+    padding: 1em;
+    border: 1px solid #CCC;
+    box-shadow: 0 0 5px grey;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 1em 0em;
+}
+
+
+li img.imgAfterClick {
+    position: absolute;
+    padding: 0;
+    left: 0;
+    width: 90%;
+    border: 5px solid #CCC;
+    box-shadow: 0 0 5px grey;
+    margin: 0% 4%;
+}
+
+
 
 /**-**********************/
 /***** PAGE TOURISME ****/
