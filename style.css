@@ -192,6 +192,21 @@ article h2 {
     font-family: 'Raleway', sans-serif;
 }
 
+/**-**********************/
+/***** PAGE TOURISME ****/
+/***********************/
+
+.tourisme article {
+    border: solid 2px rgba(128, 128, 128, 0.096);
+    box-shadow: 3px 3px rgba(128, 128, 128, 0.11);
+    margin-bottom: 25px;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 /* ************* FOOTER *************/
 footer {
     margin-bottom: 180px;
@@ -274,8 +289,9 @@ i {
     padding: var(--spacing);
 }
 
+/*******************/
 /***** NAV MENU****/
-
+/*****************/
 nav {
     display: flex;
     /* Transforme le nav en conteneur flexible*/
