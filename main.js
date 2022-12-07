@@ -11,6 +11,7 @@ function navMenuExpand() {
     elementsMenu[elementMenuArray[i]].classList.toggle('hidden'); /* Si les éléments n'ont pas la classe hidden, l'ajoute sinon la retire */
 
     if (elementsMenu[elementMenuArray[i]].classList[0] === "none") { /* Vérifie si les éléments ont la classe none */
+
         for (let j = 0; j < elementMenuArray.length; j++) { /*  Boucle qui recommence pour tous les éléments*/
             elementsMenu[elementMenuArray[j]].classList.remove('none'); /*  Retire la class none à tous les éléments*/
         }
@@ -21,20 +22,62 @@ function navMenuExpand() {
         setTimeout(navMenuExpand, 100) //Attend 1s avant de relancer la fonction.
     }
     else { // S'il ne reste plus d'élément 
-        document.querySelector("#navButton").disabled = false; // Réactive le bouton
         elementMenuArray = elementMenuArray.reverse(); // Inverse le tableau des éléments
         i = 0; // Remet la boucle à zéro
         if (elementsMenu[elementMenuArray[i]].classList[0] === "hidden") { /* Vérifie si les éléments ont la classe hidden */
             setTimeout(function () { /*  Paramètre le délai avant de lancer la boucle*/
                 for (let i = 0; i < elementMenuArray.length; i++) {/*  Boucle qui recommence pour tous les éléments*/
                     elementsMenu[elementMenuArray[i]].classList.add('none');/*  Ajoute la class none à tous les éléments*/
+
                 }
-            }, 200)
+            }, 500)
         }
     }
 }
 
 buttonMenu.onclick = function () { // Active la fonction lors du clic du bouton
     document.querySelector("#navButton").disabled = true; // Désactive le bouton
+    setTimeout(function () {
+        document.querySelector("#navButton").disabled = false; // Réactive le bouton
+    }, 1000)
     navMenuExpand(); // Lance la fonction 
 };
+
+/* ******************************* */
+/* FUNCTION  IMAGE CLIC   /
+/* *****************************/
+
+
+
+const element = document.getElementsByClassName("imgClick") // Cible les éléments qui ont pour classe imgClick
+for (let i = 0; i < element.length; i++) { // Boucle qui recommence tant qu'il reste des éléments 
+    element[i].onclick = function () { // Active la fonction lors du clic du bouton
+        element[i].classList.toggle("imgAfterClick") // Si l'élément possède la classe imgAfterClick la retire, sinon l'ajoute
+    }
+}
+
+
+/* ******************************* */
+/*   GALERY*/
+/* *****************************/
+let allGridItems = [...document.getElementsByClassName("grid-item")];
+let popupBg = document.getElementById("popup-bg");
+let popupImg = document.getElementById("popup-img");
+
+const openPopup = (e) => {
+    let gridItemClicked = e.target.closest(".grid-item");
+    let clickedImageName = gridItemClicked.id;
+    popupBg.classList.add("active");
+    popupImg.src = `./galery/${clickedImageName}.jpg`;
+};
+
+const closePopup = () => {
+    popupBg.classList.remove("active");
+};
+
+allGridItems.forEach((el) => el.addEventListener("click", openPopup));
+
+popupImg.addEventListener("click", (e) => e.stopPropagation());
+popupBg.addEventListener("click", closePopup);
+
+
