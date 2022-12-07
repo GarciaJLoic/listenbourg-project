@@ -96,19 +96,24 @@
 
     <footer>
         <!-- Mise en place d'un formulaire contact -->
-        <form method="post" action="mailto:contact@welcomelistenbourg.com">
-            <h2> Contact</h2>
-            <p>Office du Tourisme situé à Lurenberg</p>
-            <!-- 3 champs obligatoires dans le formulaire - envoi par email -->
-            <div class="formu">
-                <input class="form-input" type="text" id="name" name="user_name" placeholder="Nom Prénom" required>
-                <input class="form-input" type="email" id="mail" name="user_mail" placeholder="Email" required>
-            </div>
-            <textarea id="msg" class="form-input" name="user_message" placeholder="Message" required></textarea>
+        <div class="footer1">
+            <form method="post" action="mailto:contact@welcomelistenbourg.com">
+                <h2> Contact</h2>
+                <p>Office du Tourisme situé à Lurenberg</p>
+                <!-- 3 champs obligatoires dans le formulaire - envoi par email -->
+                <div class="formu"><input type="text" id="name" name="user_name" placeholder="Nom Prénom" required>
+                    <input type="email" id="mail" name="user_mail" placeholder="Email" required>
+                </div>
+                <textarea id="msg" name="user_message" placeholder="Message" required></textarea>
 
+                <button type="submit">Envoyer</button>
+
+            </form>
             <div class="social">
+                <div id="socialTitle">
+                    <h2>Suivez-nous</h2>
+                </div>
                 <!-- renvoi dans une autre page et icones fontawesome dans le head-->
-
                 <div class="icon">
                     <a target="_blank" href="https://www.facebook.com/WelcomeListenbourg"> <i
                             class="fa-brands fa-facebook"></i></a>
@@ -117,12 +122,10 @@
                     <a target="_blank" href="https://www.twitter.com/WelcomeListenbourg"><i
                             class="fa-brands fa-twitter"></i></a>
                 </div>
-
-                <button type="submit">Envoyer</button>
-
             </div>
-        </form>
-        <!-- séparation de la ligne basse du footer -->
+        </div>
+
+
     </footer>
 
 

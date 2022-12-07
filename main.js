@@ -43,8 +43,6 @@ buttonMenu.onclick = function () { // Active la fonction lors du clic du bouton
     navMenuExpand(); // Lance la fonction 
 };
 
-
-
 /* ******************************* */
 /* FUNCTION  IMAGE CLIC   /
 /* *****************************/
@@ -57,5 +55,29 @@ for (let i = 0; i < element.length; i++) { // Boucle qui recommence tant qu'il r
         element[i].classList.toggle("imgAfterClick") // Si l'élément possède la classe imgAfterClick la retire, sinon l'ajoute
     }
 }
+
+
+/* ******************************* */
+/*   GALERY*/
+/* *****************************/
+let allGridItems = [...document.getElementsByClassName("grid-item")];
+let popupBg = document.getElementById("popup-bg");
+let popupImg = document.getElementById("popup-img");
+
+const openPopup = (e) => {
+    let gridItemClicked = e.target.closest(".grid-item");
+    let clickedImageName = gridItemClicked.id;
+    popupBg.classList.add("active");
+    popupImg.src = `./galery/${clickedImageName}.jpg`;
+};
+
+const closePopup = () => {
+    popupBg.classList.remove("active");
+};
+
+allGridItems.forEach((el) => el.addEventListener("click", openPopup));
+
+popupImg.addEventListener("click", (e) => e.stopPropagation());
+popupBg.addEventListener("click", closePopup);
 
 
