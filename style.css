@@ -205,6 +205,7 @@ article h2 {
     box-shadow: 0 0 5px grey;
     display: flex;
     font-size: var(--text-font-size);
+    font-family: var(--main-font);
 }
 
 .frise {
@@ -234,6 +235,14 @@ article h2 {
     align-items: center;
 }
 
+.histoire li img {
+    max-width: 250px;
+}
+
+.histoire li img.imgAfterClick {
+    max-width: none;
+}
+
 .histoire li:nth-child(1) {
     margin-top: calc(var(--spacing)*2);
 }
@@ -259,7 +268,7 @@ article h2 {
 }
 
 .histoire li:nth-child(7) {
-    margin-top: 220px;
+    margin-top: 270px;
 
 }
 
@@ -331,7 +340,7 @@ li img.imgAfterClick {
 
 /* ************* FOOTER *************/
 footer {
-    margin-bottom: 180px;
+    margin-bottom: 110px;
 }
 
 footer h2 {
@@ -519,8 +528,10 @@ nav ul {
     padding: 0;
     /* Supprime le padding par défaut */
     position: relative;
-    /* position l'élément de façon relative pour permettre déplacer plus facilement */
-    top: 70px;
+
+    position: absolute;
+    bottom: 6px;
+    margin: 0;
     /* Le déplace vers le bas */
     z-index: 1;
     /* Permet à l'élément d'être au premier plan */
@@ -563,6 +574,7 @@ nav li:hover,
     /*  Remet le pointeur dans sa position d'origine*/
     transition: opacity 1s, scale 1s;
     /*  Paramètre la transition*/
+    width: 50px;
 }
 
 #navList .hidden {
@@ -577,20 +589,32 @@ nav li:hover,
 }
 
 #navList .none {
-    display: none;
+    position: absolute;
 }
 
-#navList a img {
-    margin: 5px;
+#navList a i {
     /*  Place les icones */
-    width: 40px;
-    /* Défini la taille des icones  */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--dark);
+    font-size: 25px;
+}
+
+#navList li {
+    vertical-align: top;
 }
 
 #navList .iconeActu {
     /* Correction de la position et de la taille d'un icone */
     width: 36px;
     margin: 2px 7px;
+}
+
+span.fa-stack {
+    width: 50px;
+    height: 50px;
 }
 
 #navButton {

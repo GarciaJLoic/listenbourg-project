@@ -109,19 +109,24 @@
 
     <footer>
         <!-- Mise en place d'un formulaire contact -->
-        <form method="post" action="mailto:contact@welcomelistenbourg.com">
-            <h2> Contact</h2>
-            <p>Office du Tourisme situé à Lurenberg</p>
-            <!-- 3 champs obligatoires dans le formulaire - envoi par email -->
-            <div class="formu">
-                <input class="form-input" type="text" id="name" name="user_name" placeholder="Nom Prénom" required>
-                <input class="form-input" type="email" id="mail" name="user_mail" placeholder="Email" required>
-            </div>
-            <textarea id="msg" class="form-input" name="user_message" placeholder="Message" required></textarea>
+        <div class="footer1">
+            <form method="post" action="mailto:contact@welcomelistenbourg.com">
+                <h2> Contact</h2>
+                <p>Office du Tourisme situé à Lurenberg</p>
+                <!-- 3 champs obligatoires dans le formulaire - envoi par email -->
+                <div class="formu"><input type="text" id="name" name="user_name" placeholder="Nom Prénom" required>
+                    <input type="email" id="mail" name="user_mail" placeholder="Email" required>
+                </div>
+                <textarea id="msg" name="user_message" placeholder="Message" required></textarea>
 
+                <button type="submit">Envoyer</button>
+
+            </form>
             <div class="social">
+                <div id="socialTitle">
+                    <h2>Suivez-nous</h2>
+                </div>
                 <!-- renvoi dans une autre page et icones fontawesome dans le head-->
-
                 <div class="icon">
                     <a target="_blank" href="https://www.facebook.com/WelcomeListenbourg"> <i
                             class="fa-brands fa-facebook"></i></a>
@@ -130,12 +135,10 @@
                     <a target="_blank" href="https://www.twitter.com/WelcomeListenbourg"><i
                             class="fa-brands fa-twitter"></i></a>
                 </div>
-
-                <button type="submit">Envoyer</button>
-
             </div>
-        </form>
-        <!-- séparation de la ligne basse du footer -->
+        </div>
+
+
     </footer>
 
 
@@ -143,24 +146,24 @@
     <nav>
         <ul id="navList">
             <a class="hidden none" href="presentation.html">
-                <li><img src="/assets/iconePlanete.png" alt="Icone menu en forme planete"></li>
+                <li class="iconeActiv"><span class="fa-stack"><i class="fa-solid fa-earth-europe"></i></span></li>
             </a>
-            <a class="hidden none" href="index.html">
-                <li><img src="/assets/iconeTourisme.png" alt="Icone menu tourisme en forme d'appareil photo"></li>
+            <a class="hidden none" href="tourisme.html">
+                <li><span class="fa-stack"><i class="fa-solid fa-plane"></i></span></li>
             </a>
-            <a class="hidden none" href="index.html">
-                <li><img src="/assets/iconeHistoire.png" alt="Icone menu histoire en forme de colone antique"></li>
+            <a class="hidden none" href="histoire.html">
+                <li><span class="fa-stack"><i class="fa-solid fa-landmark-dome"></i> </span></li>
             </a>
             <a class="hidden none" href="actualites.html">
-                <li><img class="iconeActu" src="/assets/iconeActualites.png"
-                        alt="Icone menu acutalité en forme d'article"></li>
+                <li><span class="fa-stack"><i class="fa-solid fa-radio"></i></span></li>
             </a>
-            <a class="hidden none" href="index.html">
-                <li><img src="/assets/iconeGallerie.png" alt="Icone menu gallerie photo en forme d'images"></li>
+            <a class="hidden none" href="galery.html">
+                <li><span class="fa-stack"><i class="fa-solid fa-panorama"></i></span></li>
             </a>
             <button id="navButton"></button>
-            <a class="hidden none" href="index.html">
-                <li class="iconeActiv"><img src="/assets/iconeAccueil.png" alt="Icone menu accueil en forme de maison">
+            <a class="hidden none" href="index.html"><span class="fa-stack">
+                    <li><i class="fa-solid fa-house-chimney">
+                </span></i>
                 </li>
             </a>
         </ul>
