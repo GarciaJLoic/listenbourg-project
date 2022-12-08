@@ -249,7 +249,7 @@ footer i {
 /* **************NAV MENU*********** */
 /* ******************************** */
 
-nav {
+.navMobile {
     display: flex;
     /* Transforme le nav en conteneur flexible*/
     flex-direction: column;
@@ -264,7 +264,7 @@ nav {
     /*  Le nav prend tout l'espace disponible en largeur */
 }
 
-nav ul {
+.navMobile ul {
     display: flex;
     /* Transforme le ul en conteneur flexible*/
     flex-wrap: wrap;
@@ -283,7 +283,7 @@ nav ul {
     /* Permet à l'élément d'être au premier plan */
 }
 
-nav li {
+.navMobile li {
     list-style-type: none;
     /*  Retire les puces */
     background-color: var(--light);
@@ -300,7 +300,7 @@ nav li {
     /*  Paramètre la transition*/
 }
 
-nav li:hover,
+.navMobile li:hover,
 #navButton:hover,
 .iconeActiv {
     box-shadow: -0px 0px 5px 0px var(--main-color);
@@ -309,7 +309,7 @@ nav li:hover,
     /*  Paramètre la transition*/
 }
 
-#navList a {
+.navMobile #navList a {
     margin: 20px;
     /* Défini la marge extérieure des éléments  */
     opacity: 1;
@@ -323,7 +323,7 @@ nav li:hover,
     width: 50px;
 }
 
-#navList .hidden {
+.navMobile #navList .hidden {
     opacity: 0;
     /*  Règle l'opacité à 0 pour faire disparaitre les icones*/
     scale: 0;
@@ -334,12 +334,12 @@ nav li:hover,
     /*  Paramètre la transition*/
 }
 
-#navList .none {
+.navMobile #navList .none {
     position: absolute;
     /* Déplace la navList lorsqu'elle est invisible pour ne pas géner la navigation */
 }
 
-#navList a i {
+.navMobile #navList a i {
 
     position: absolute;
     top: 50%;
@@ -353,13 +353,13 @@ nav li:hover,
     /* Défini la taille des icones */
 }
 
-span.fa-stack {
+.navMobile span.fa-stack {
     width: 50px;
     height: 50px;
     /* Défini la largeur et la hauteur des icones */
 }
 
-#navButton {
+.navMobile #navButton {
     border-radius: 50%;
     /* Transforme le bouton en cercle */
     width: 68px;
@@ -382,7 +382,7 @@ span.fa-stack {
 
 
 /* Bandeau de couleur */
-.box {
+.navMobile .box {
     background-color: var(--main-color);
     /* Défini la couleur */
     width: 100%;
@@ -392,7 +392,7 @@ span.fa-stack {
 
 }
 
-.inBox {
+.navMobile .inBox {
     /* Cercle blanc autour de l'icone du Listenbourg */
     background-color: var(--light);
     /* Défini la couleur */
@@ -406,12 +406,17 @@ span.fa-stack {
     /* Place le cercle au milieu de l'écran*/
 }
 
-.box p {
+.navMobile .box p {
     position: fixed;
     bottom: 0;
     right: var(--spacing);
     font-weight: bold;
 }
+
+.navWeb {
+    display: none;
+}
+
 
 /* *************************************** */
 /* **************PAGE ACCUEIL************ */
@@ -476,6 +481,7 @@ span.fa-stack {
     display: flex;
     font-size: var(--text-font-size);
     font-family: var(--main-font);
+    margin-top: 50px;
 }
 
 .histoire li {
@@ -484,41 +490,54 @@ span.fa-stack {
     align-items: center;
 }
 
+.histoire p {
+    font-size: var(--text-font-size);
+    margin: 0;
+    padding: 0;
+}
+
 /* ****************************************************** */
 /* Positionnement des éléments de la frise chronologique */
 /* **************************************************** */
-.histoire li:nth-child(1) {
-    margin-top: calc(var(--spacing)*2);
+.histoire .frise li {
+    pointer-events: none;
 }
 
-.histoire li:nth-child(2) {
-    margin-top: 350px;
+.histoire li.messageDesktop {
+    display: none;
 }
 
-.histoire li:nth-child(3) {
-    margin-top: 300px;
+.histoire .frise li:nth-child(1) {
+    margin-top: 15px;
 }
 
-.histoire li:nth-child(4) {
-    margin-top: 300px;
+.histoire .frise li:nth-child(2) {
+    margin-top: 396px;
 }
 
-.histoire li:nth-child(5) {
-    margin-top: 260px;
+.histoire .frise li:nth-child(3) {
+    margin-top: 388px;
 }
 
-.histoire li:nth-child(6) {
-    margin-top: 280px;
+.histoire .frise li:nth-child(4) {
+    margin-top: 420px;
 }
 
-.histoire li:nth-child(7) {
-    margin-top: 270px;
+.histoire .frise li:nth-child(5) {
+    margin-top: 348px;
+}
+
+.histoire .frise li:nth-child(6) {
+    margin-top: 358px;
+}
+
+.histoire .frise li:nth-child(7) {
+    margin-top: 355px;
 
 }
 
-.histoire li:nth-child(8) {
-    margin-top: 310px;
-    margin-bottom: 180px;
+.histoire .frise li:nth-child(8) {
+    margin-top: 389px;
 }
 
 .histoire li img {
@@ -564,10 +583,9 @@ span.fa-stack {
 
 /* Défini le bloc des évenèments historiques*/
 .histoire .evenements {
-    padding: 1em;
+    padding: 3em 1em;
     border: 1px solid #CCC;
     box-shadow: 0 0 5px grey;
-    width: 100%;
     display: flex;
     flex-direction: column;
     list-style: none;
@@ -575,13 +593,20 @@ span.fa-stack {
 }
 
 /* Affiche les évènements en colonnes */
-.histoire .evenements li {
+.histoire .evenementHistoire {
     flex-direction: column;
+    height: 100%;
+    margin: 10px 0px;
 }
 
 /* Ajoute une marge extérieure au dessus et en dessous des images des évènements historiques */
 .histoire .evenements li img {
-    margin: 10px 0;
+    margin: 20px 0;
+}
+
+
+.histoire .evenementHistoire figcaption {
+    text-align: center;
 }
 
 /* Affichage des images en grand après le clic (Activé en JS) */
@@ -605,6 +630,10 @@ span.fa-stack {
     display: flex;
     align-items: center;
     flex-direction: row;
+}
+
+.presentationPage section p {
+    text-align: justify;
 }
 
 .miniature {
@@ -729,6 +758,9 @@ span.fa-stack {
 /* ***************************************** */
 /* *************PAGE ACTUALITES************ */
 /* ************************************** */
+.articleActu {
+    margin-top: 0;
+}
 
 .articleActu1,
 .articleActu2,
@@ -743,6 +775,8 @@ span.fa-stack {
     align-items: center;
     border: 1px solid #CCC;
     box-shadow: 0 0 5px grey;
+    width: auto;
+    text-align: center;
 }
 
 .articleActu5 {
@@ -762,6 +796,157 @@ span.fa-stack {
 /* *** MEDIA QUERIES** */
 /* ****************** */
 /* ***************** */
+
+/* ************************************* */
+/* **************NAVBAR WEB************ */
+/* *********************************** */
+
+@media screen and (min-width: 749px) {
+    .navWeb {
+        display: flex;
+        width: 97%;
+        justify-content: space-between;
+
+    }
+
+    .navWeb img {
+        width: 60px;
+    }
+
+    .navWeb .navList {
+        display: flex;
+        gap: 30px;
+        list-style: none;
+    }
+
+    .navWeb .navList li a {
+        list-style: none;
+        font-size: 28px;
+        color: var(--light);
+        text-decoration: none;
+        text-shadow: 0px 5px 5px rgb(0, 0, 0);
+        font-weight: bold;
+        transition: color 0.5s;
+    }
+
+    .navWeb .navList li a:hover {
+        color: var(--main-color);
+        transition: color 0.5s;
+    }
+
+    .navWeb .navList li a.activeMenu {
+        color: var(--main-color);
+    }
+
+    .titleGroup {
+        gap: 60px;
+        justify-content: flex-start;
+    }
+
+    .navList,
+    #navButton,
+    .inBox {
+        display: none;
+    }
+
+    .navMobile {
+        position: initial;
+    }
+
+    .navMobile .box p {
+        position: relative;
+        text-align: end;
+        margin-top: 30px;
+        margin-right: 20px;
+    }
+}
+
+/* ***************************************** */
+/* **************PAGE HISTOIRE************ */
+/* ************************************** */
+
+@media screen and (min-width: 749px) {
+    .histoire section {
+        flex-direction: column;
+        width: 95%;
+        margin: auto;
+    }
+
+    .histoire .frise {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .histoire .frise li {
+        margin: 0;
+        font-size: var(--secondaryTitle-size);
+        pointer-events: all;
+        cursor: pointer;
+    }
+
+    .histoire .frise li::after,
+    .histoire .noneDesktop {
+        display: none;
+    }
+
+    .histoire .evenements {
+        min-height: 500px;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .histoire .evenementHistoire {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .histoire .evenementHistoire p {
+        font-size: 40px;
+        width: 40%;
+        line-height: 49px;
+    }
+
+    .histoire .evenementHistoire div {
+        text-align: center;
+        width: 300px;
+    }
+
+    .histoire .evenementHistoire figcaption {
+        font-size: var(--secondaryTitle-size);
+    }
+
+    .histoire .frise li:nth-child(1),
+    .histoire .frise li:nth-child(2),
+    .histoire .frise li:nth-child(3),
+    .histoire .frise li:nth-child(4),
+    .histoire .frise li:nth-child(5),
+    .histoire .frise li:nth-child(6),
+    .histoire .frise li:nth-child(7),
+    .histoire .frise li:nth-child(8) {
+        margin-top: 0px;
+    }
+
+    .imgClick {
+        pointer-events: none;
+    }
+
+    .histoire li.messageDesktop {
+        display: flex;
+
+    }
+
+    .histoire li.messageDesktop p {
+        font-size: 40px;
+        width: 60%;
+        text-align: center;
+        margin: auto;
+        line-height: 70px;
+    }
+
+}
 
 
 @media screen and (min-width: 749px) {
@@ -813,7 +998,7 @@ span.fa-stack {
     }
 
     .gridActu {
-        width: 95%;
+        width: 98.2%;
         margin: auto;
         text-align: center;
         display: grid;
@@ -894,7 +1079,7 @@ span.fa-stack {
     .titleGroup {
         background: url(assets/banniere_web.jpg) no-repeat center top;
         background-size: cover;
-        height: 350px;
+        height: 450px;
     }
 }
 
