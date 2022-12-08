@@ -853,6 +853,13 @@ footer i {
     .navMobile {
         position: initial;
     }
+
+    .navMobile .box p {
+        position: relative;
+        text-align: end;
+        margin-top: 30px;
+        margin-right: 20px;
+    }
 }
 
 /* ***************************************** */
