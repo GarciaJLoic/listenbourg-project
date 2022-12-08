@@ -727,7 +727,7 @@ span.fa-stack {
 /* *************PAGE ACTUALITES************ */
 /* ************************************** */
 
-.articleActu {
+.articleActu1, .articleActu2, .articleActu3, .articleActu4, .articleActu5 {
     padding: 1em;
     margin-top: var(--spacing-2);
     margin-bottom: var(--spacing-2);
@@ -738,6 +738,9 @@ span.fa-stack {
     border: 1px solid #CCC;
     box-shadow: 0 0 5px grey;
 }
+.articleActu5 {
+    display: none;
+}
 
 .act-titreH2 {
     font-family: var(--secondaryTitle-font);
@@ -746,22 +749,6 @@ span.fa-stack {
     margin: var(--spacing);
     height: auto;
 }
-
-.articleActu img {
-    /* Reglage des images articles */
-    padding-left: 0px;
-    padding-right: 0px;
-}
-
-.img_actu {
-    width: 100%;
-    margin-top: var(--spacing);
-}
-
-.act-articleText {
-    text-align: justify;
-}
-
 
 /* ********************* */
 /* ******************** */
@@ -811,6 +798,39 @@ span.fa-stack {
         padding: var(--spacing);
 
     }
+
+    .titleGroup {
+        background: url(assets/banniere_web.jpg) no-repeat center top;
+        background-size: cover;
+        height: 450px;
+    }
+    
+    .gridActu {
+        text-align: center;
+        margin: var(--spacing-2);
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 0.5fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+        
+    .articleActu4 {
+        grid-area: 1 / 1 / 3 / 2;
+    }
+    .articleActu2 {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+    .articleActu3 {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+    .articleActu1 {
+        grid-area: 3 / 1 / 4 / 3;
+    }
+    .articleActu5 {
+        display: block;
+        grid-area: 1 / 3 / 4 / 4;
+    }
 }
 
 @media screen and (max-width: 748px) {
@@ -824,7 +844,6 @@ span.fa-stack {
         box-shadow: 0 0 5px grey;
         margin-bottom: var(--spacing-2);
         margin-top: var(--spacing-2);
-        align-items: center;
         margin-left: var(--spacing);
         margin-right: var(--spacing);
 
@@ -859,7 +878,7 @@ span.fa-stack {
         background-size: cover;
         height: 350px;
     }
-}
+} 
 #landParallax {
     margin: 100px 0 0 0;
 }
