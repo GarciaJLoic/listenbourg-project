@@ -443,41 +443,54 @@ span.fa-stack {
     align-items: center;
 }
 
+.histoire p {
+    font-size: var(--text-font-size);
+    margin: 0;
+    padding: 0;
+}
+
 /* ****************************************************** */
 /* Positionnement des éléments de la frise chronologique */
 /* **************************************************** */
-.histoire li:nth-child(1) {
-    margin-top: calc(var(--spacing)*2);
+.histoire .frise li {
+    pointer-events: none;
 }
 
-.histoire li:nth-child(2) {
-    margin-top: 350px;
+.histoire li.messageDesktop {
+    display: none;
 }
 
-.histoire li:nth-child(3) {
-    margin-top: 300px;
+.histoire .frise li:nth-child(1) {
+    margin-top: 15px;
 }
 
-.histoire li:nth-child(4) {
-    margin-top: 300px;
+.histoire .frise li:nth-child(2) {
+    margin-top: 396px;
 }
 
-.histoire li:nth-child(5) {
-    margin-top: 260px;
+.histoire .frise li:nth-child(3) {
+    margin-top: 388px;
 }
 
-.histoire li:nth-child(6) {
-    margin-top: 280px;
+.histoire .frise li:nth-child(4) {
+    margin-top: 420px;
 }
 
-.histoire li:nth-child(7) {
-    margin-top: 270px;
+.histoire .frise li:nth-child(5) {
+    margin-top: 348px;
+}
+
+.histoire .frise li:nth-child(6) {
+    margin-top: 358px;
+}
+
+.histoire .frise li:nth-child(7) {
+    margin-top: 355px;
 
 }
 
-.histoire li:nth-child(8) {
-    margin-top: 310px;
-    margin-bottom: 180px;
+.histoire .frise li:nth-child(8) {
+    margin-top: 389px;
 }
 
 .histoire li img {
@@ -523,10 +536,9 @@ span.fa-stack {
 
 /* Défini le bloc des évenèments historiques*/
 .histoire .evenements {
-    padding: 1em;
+    padding: 3em 1em;
     border: 1px solid #CCC;
     box-shadow: 0 0 5px grey;
-    width: 100%;
     display: flex;
     flex-direction: column;
     list-style: none;
@@ -534,13 +546,20 @@ span.fa-stack {
 }
 
 /* Affiche les évènements en colonnes */
-.histoire .evenements li {
+.histoire .evenementHistoire {
     flex-direction: column;
+    height: 100%;
+    margin: 10px 0px;
 }
 
 /* Ajoute une marge extérieure au dessus et en dessous des images des évènements historiques */
 .histoire .evenements li img {
-    margin: 10px 0;
+    margin: 20px 0;
+}
+
+
+.histoire .evenementHistoire figcaption {
+    text-align: center;
 }
 
 /* Affichage des images en grand après le clic (Activé en JS) */
@@ -564,6 +583,10 @@ span.fa-stack {
     display: flex;
     align-items: center;
     flex-direction: row;
+}
+
+.presentationPage section p {
+    text-align: justify;
 }
 
 .miniature {
@@ -730,6 +753,99 @@ span.fa-stack {
 /* *** MEDIA QUERIES** */
 /* ****************** */
 /* ***************** */
+
+
+
+/* ***************************************** */
+/* **************PAGE HISTOIRE************ */
+/* ************************************** */
+
+@media screen and (min-width: 749px) {
+    .histoire section {
+        flex-direction: column;
+    }
+
+    .histoire .frise {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .histoire .frise li {
+        margin: 0;
+        font-size: var(--secondaryTitle-size);
+        pointer-events: all;
+        cursor: pointer;
+    }
+
+    .histoire .frise li::after,
+    .histoire .noneDesktop {
+        display: none;
+    }
+
+    .histoire .evenements {
+        min-height: 500px;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .histoire .evenementHistoire {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .histoire .evenementHistoire p {
+        font-size: 40px;
+        width: 40%;
+        line-height: 49px;
+    }
+
+    .histoire .evenementHistoire div {
+        text-align: center;
+        width: 300px;
+    }
+
+    .histoire .evenementHistoire figcaption {
+        font-size: var(--secondaryTitle-size);
+    }
+
+    .histoire .frise li:nth-child(1),
+    .histoire .frise li:nth-child(2),
+    .histoire .frise li:nth-child(3),
+    .histoire .frise li:nth-child(4),
+    .histoire .frise li:nth-child(5),
+    .histoire .frise li:nth-child(6),
+    .histoire .frise li:nth-child(7),
+    .histoire .frise li:nth-child(8) {
+        margin-top: 0px;
+    }
+
+    .imgClick {
+        pointer-events: none;
+    }
+
+    .histoire li.messageDesktop {
+        display: flex;
+
+    }
+
+    .histoire li.messageDesktop p {
+        font-size: 40px;
+        width: 60%;
+        text-align: center;
+        margin: auto;
+        line-height: 70px;
+    }
+
+    /* .click {
+        flex-direction: row;
+        justify-content: space-around;
+        display: flex;
+        height: auto;
+      } */
+}
 
 
 @media screen and (min-width: 749px) {

@@ -56,6 +56,23 @@ for (let i = 0; i < element.length; i++) { // Boucle qui recommence tant qu'il r
     }
 }
 
+/* ******************************* */
+/* FUNCTION  HISTOIRE CLIC   /
+/* *****************************/
+
+
+
+const elem = document.getElementsByClassName("date") // Cible les éléments qui ont pour classe imgClick
+const evenementHistoire = document.getElementsByClassName("evenementHistoire")
+for (let i = 0; i < elem.length; i++) { // Boucle qui recommence tant qu'il reste des éléments 
+    elem[i].onclick = function () { // Active la fonction lors du clic du bouton
+        for (let j = 0; j < evenementHistoire.length; j++) {
+            evenementHistoire[j].classList.remove("messageDesktop")
+            evenementHistoire[j].classList.add("noneDesktop")
+            evenementHistoire[i].classList.remove("noneDesktop")
+        }
+    }
+}
 
 /* ******************************* */
 /*   GALERY*/
