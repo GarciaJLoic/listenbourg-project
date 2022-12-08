@@ -773,7 +773,82 @@ span.fa-stack {
         padding: var(--spacing);
 
     }
+
+    /* **********************Tourisme - desktop********************* */
+    .pointInteret {
+        display: flex;
+        /* Transforme le nav en conteneur flexible*/
+        flex-direction: row;
+        /*  Oriente les éléments contenu dans les articles en ligne*/
+        justify-content: center;
+
+    }
+
+    .pointInteret article {
+        border: none;
+        /* enlève la bordure autour des articles */
+        box-shadow: none;
+        /* enlève l'ombre autour des articles */
+    }
+
+
+    .pointInteret img {
+        width: 300px;
+        height: 250px;
+    }
+
+    .pointInteret h2 {
+        font-size: var(--text-font-size);
+    }
+
+    .pointInteret p {
+        visibility: hidden;
+        display: none;
+    }
+
+    .seRendreAuListenbourg article {
+        border: none;
+        /* enlève la bordure autour des articles */
+        box-shadow: none;
+        /* enlève l'ombre autour des articles */
+    }
+
+    .seRendreAuListenbourg img {
+        width: 700px;
+    }
+
+
+
+    .visa img,
+    .covid img {
+        width: 300px;
+        height: 200px;
+    }
+
+    .covid article,
+    .visa article {
+        border: none;
+        box-shadow: none;
+        box-sizing: border-box;
+        flex: none;
+    }
+
+    .flotteR {
+        float: right;
+        display: flex;
+        align-items: center;
+
+    }
+
+    .flotteL {
+        float: left;
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+    }
 }
+}
+
 
 @media screen and (max-width: 748px) {
     .footer1 {
