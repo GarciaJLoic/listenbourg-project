@@ -37,6 +37,7 @@ article {
     width: 95%;
     margin: 100px 0 0 0;
 }
+
 body {
     margin: 0;
     padding: 0;
@@ -98,10 +99,12 @@ article h2 {
     text-align: center;
     font-family: 'Raleway', 'sans-serif';
 }
+
 .tourisme {
     display: flex;
     justify-content: center;
 }
+
 /* Sélectionne  les articles  présents dans les pages index et tourisme */
 .index article,
 .tourisme article {
@@ -422,6 +425,7 @@ footer i {
     display: flex;
     justify-content: center;
 }
+
 .bienvenue h1 {
     color: var(--dark);
 }
@@ -431,6 +435,7 @@ footer i {
 .cadre img {
     /* padding-top: 20px; */
 }
+
 .index article a {
     text-decoration: none;
 }
@@ -438,34 +443,36 @@ footer i {
 .index article a:hover {
     color: var(--main-color);
 }
-.images-desktop{ 
+
+.images-desktop {
     display: none;
 }
 
-    
-    
-@media screen and (min-width: 700px){  
 
-    .images-desktop{
-    display: initial;
-    
- }   
-   .images-galeries{
-    width: 300px;
-    display: flex;
-    justify-content: center;
-    
-    
 
-   }
+@media screen and (min-width: 700px) {
 
-   .images-galeries :first-child {
-    align-self: center;
+    .images-desktop {
+        display: initial;
 
-   }
-   }
-    
-       
+    }
+
+    .images-galeries {
+        width: 300px;
+        display: flex;
+        justify-content: center;
+
+
+
+    }
+
+    .images-galeries :first-child {
+        align-self: center;
+
+    }
+}
+
+
 
 /* ***************************************** */
 /* **************PAGE HISTOIRE************ */
@@ -755,7 +762,11 @@ footer i {
 /* *************PAGE ACTUALITES************ */
 /* ************************************** */
 
-.articleActu1, .articleActu2, .articleActu3, .articleActu4, .articleActu5 {
+.articleActu1,
+.articleActu2,
+.articleActu3,
+.articleActu4,
+.articleActu5 {
     padding: 1em;
     margin-top: var(--spacing-2);
     margin-bottom: var(--spacing-2);
@@ -765,7 +776,10 @@ footer i {
     align-items: center;
     border: 1px solid #CCC;
     box-shadow: 0 0 5px grey;
+    width: auto;
+    text-align: center;
 }
+
 .articleActu5 {
     display: none;
 }
@@ -848,6 +862,8 @@ footer i {
 @media screen and (min-width: 749px) {
     .histoire section {
         flex-direction: column;
+        width: 95%;
+        margin: auto;
     }
 
     .histoire .frise {
@@ -974,7 +990,11 @@ footer i {
         background-size: cover;
         height: 450px;
     }
-    
+
+    .articleActu {
+        margin-top: 0;
+    }
+
     .gridActu {
         text-align: center;
         margin: var(--spacing-2);
@@ -984,19 +1004,23 @@ footer i {
         grid-column-gap: 0px;
         grid-row-gap: 0px;
     }
-        
+
     .articleActu4 {
         grid-area: 1 / 1 / 3 / 2;
     }
+
     .articleActu2 {
         grid-area: 1 / 2 / 2 / 3;
     }
+
     .articleActu3 {
         grid-area: 2 / 2 / 3 / 3;
     }
+
     .articleActu1 {
         grid-area: 3 / 1 / 4 / 3;
     }
+
     .articleActu5 {
         display: block;
         grid-area: 1 / 3 / 4 / 4;
@@ -1034,10 +1058,11 @@ footer i {
         display: flex;
         justify-content: center;
     }
-    .images-galeries{
+
+    .images-galeries {
         display: flex;
-    flex-direction: column;
-    align-items: center;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -1048,10 +1073,12 @@ footer i {
         background-size: cover;
         height: 450px;
     }
-} 
+}
+
 #landParallax {
     margin: 100px 0 0 0;
 }
+
 .parallax {
     height: 50vh;
     background-attachment: fixed;
@@ -1060,21 +1087,24 @@ footer i {
     background-size: cover;
     /* background-image: url("./asset/poudlar.png"),
       linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(53, 53, 142, 0) 35%); */
-  }
+}
 
-  .parallax1 {
+.parallax1 {
     background-image: url("./assets/arbre-soleil.jpg");
     /* background: rgb(0, 0, 0); */
-  }
-  .parallax2 {
+}
+
+.parallax2 {
     background-image: url("./galery/photoGalery-16.jpg");
     /* background: rgb(0, 0, 0); */
-  }
-  .landHistoire {
+}
+
+.landHistoire {
     display: flex;
     justify-content: center;
-  }
-  .images-end{
+}
+
+.images-end {
     display: flex;
     justify-content: center;
-  }
+}
