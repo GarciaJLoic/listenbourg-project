@@ -485,6 +485,7 @@ footer i {
     display: flex;
     font-size: var(--text-font-size);
     font-family: var(--main-font);
+    margin-top: 50px;
 }
 
 .histoire li {
@@ -761,6 +762,9 @@ footer i {
 /* ***************************************** */
 /* *************PAGE ACTUALITES************ */
 /* ************************************** */
+.articleActu {
+    margin-top: 0;
+}
 
 .articleActu1,
 .articleActu2,
@@ -998,9 +1002,7 @@ footer i {
         height: 450px;
     }
 
-    .articleActu {
-        margin-top: 0;
-    }
+
 
     .gridActu {
         text-align: center;
