@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Oswald&family=Raleway:wght@100;200&display=swap');
 
-/* ****************Création des variables**************** */
+/* ****************************************** */
+/* ***************************************** */
+/* *********Création des variables********* */
+/* *************************************** */
+/* ************************************** */
 :root {
     /* ************Colors************ */
     --main-color: #AD2C40;
     --secondary-color: #415271;
-    --dark: white;
+    --light: white;
     --dark: black;
     /* ************spacing************ */
     --spacing: 8px;
@@ -23,12 +27,26 @@
     --title-font-size: 32pt;
 }
 
+/* ****************************************** */
+/* *********AFFECTE TOUT LE SITE*********** */
+/* ************************************** */
 
 /* Police, taille et couleur de base sur tout le site */
+article {
 
- body {
+    width: 95%;
+    margin: 100px 0 0 0;
+}
+
+body {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 100%;
+    margin: auto;
 }
 
 /* Police, taille et couleur du H1 */
@@ -38,40 +56,117 @@ h1 {
     color: var(--light);
 }
 
-/* Police, taille et couleur du H2 */
-h2 {
-    font-family: var(--secondaryTitle-font);
-    font-size: var(--secondaryTitle-size);
+.form-input,
+p {
+    text-align: justify;
+    font-family: var(--main-font);
+    font-size: var(--text-font-size);
     color: var(--dark);
 }
 
-/* ************* HEADER *************/
-header {
-    background-size: cover;
-    height: 100%;
-    margin: 1em;
-    display: flex;
+section h1 {
+    font-family: 'Oswald', sans-serif;
+    /* Police titre principal */
+    font-size: var(--title-font-size);
+    /* Taille police titre principal */
     text-align: center;
+    /* Centrer le titre */
+    padding-bottom: 5px;
+    /* Padding bas */
+}
+
+section p {
+    font-family: 'Raleway', sans-serif;
+    /* Police paragraphe */
+    font-size: var(--secondaryTitle-size);
+    /* Taille police paragraphe */
+    padding-top: var(--spacing-4);
+    /* Espacement entre la ligne et le paragraphe */
+    padding-bottom: var(--spacing-4);
+    /* Ligne du haut du paragraphe */
+    line-height: var(--spacing-4);
+}
+
+section img {
+    /* Reglage des images articles */
+    width: 80%;
+    /* padding-left: 40px;
+    padding-right: 40px; */
+    box-shadow: 0px 14px 14px #0000004d;
+}
+
+article h2 {
+    text-align: center;
+    font-family: 'Raleway', 'sans-serif';
+}
+
+.tourisme {
+    display: flex;
+    justify-content: center;
+}
+
+/* Sélectionne  les articles  présents dans les pages index et tourisme */
+.index article,
+.tourisme article {
+
+    border: solid 2px rgba(128, 128, 128, 0.096);
+    /* Défini la bordure autour des articles */
+    box-shadow: 3px 3px rgba(128, 128, 128, 0.11);
+    /* Défini l'ombre autour des articles */
+    margin-bottom: 25px;
+    /* Défini la marge extérieur des articles */
+    text-align: justify;
+    /* Justifie le texte des articles */
+    display: flex;
+    /* Transforme le nav en conteneur flexible*/
     flex-direction: column;
+    /*  Oriente les éléments contenu dans les articles en colonnes*/
+    align-items: center;
+    /* Centre les éléments selon l'axe secondaire */
+}
+
+/* Sélectionne  les paragraphes de toutes les sections présentes dans les pages index et tourisme */
+
+.index section p,
+.tourisme section p {
+    width: 80%;
+    /*  Défini la largeur*/
+    padding-left: 40px;
+    padding-right: 40px;
+    /* Défini la marge intérieur à gauche et à droite des paragraphes de toutes les sections de pages index et tourisme */
+    text-align: center;
+    /* Centre le texte des paragraphes de toutes les sections de pages index et tourisme */
+}
+
+/* Je n'ai pas trouvé à quoi cela correspond */
+/* Police, taille et couleur du H2 */
+/* .head-h2 {
+    font-family: var(--secondaryTitle-font);
+    font-size: var(--secondaryTitle-size);
+    color: var(--dark);
+} */
+
+/* *********************************** */
+/* ************* HEADER ************ */
+/* ******************************* */
+header {
+    display: flex;
+    /* Transforme le header en conteneur flexible*/
+    flex-direction: column;
+    /*  Oriente les éléments contenu dans nav en colonnes*/
 }
 
 header::after {
+    /* Ajoute un élément juste avant la fin du header  */
     content: "";
+    /* Obligatoire pour que l'élément apparaisse */
     height: 62px;
-    width: 100%;
+    /* Défini la hauteur */
     background: url(/assets/Arrow1.png) no-repeat;
-    margin-top: -1px;
+    /* Fait appairaitre la fléche décorative en background et empeche qu'il ne se répète */
     background-position-x: center;
+    /* Centre le background */
 }
-
-.titleGroup h1,
-.titleGroup h2 {
-    color: var(--light);
-    margin: var(--spacing);
-    height: auto;
-    text-shadow: 0px 5px 5px rgb(0, 0, 0);
-}
-
 
 .titleGroup {
     background: url(assets/banniere_mob.jpg) no-repeat center top;
@@ -84,67 +179,20 @@ header::after {
     justify-content: center;
 }
 
-/* &&&&&&&&&&&&&&&&  MAIN  &&&&&&&&&&&&&&& */
-
-main {
-    width: 95%;
-    margin: auto;
+.titleGroup h1,
+.titleGroup h2 {
+    color: var(--light);
+    margin: var(--spacing);
+    height: auto;
+    text-shadow: 0px 5px 5px rgb(0, 0, 0);
 }
 
-section h1 {
-    font-family: 'Oswald', sans-serif;
-    /* Police titre principal */
-    font-size: var(--title-font-size);
-    /* Taille police titre principal */
-    text-align: center;
-    /* Centrer le titre */
-    padding-bottom: 5px;
-    /* Padding bas */
+/* ********************************** */
+/* ************* FOOTER ************ */
+/* ******************************** */
 
-}
-
-
-section p{
-    font-family:'Raleway', sans-serif;                            /* Police paragraphe */
-    font-size:  var(--secondaryTitle-size);                       /* Taille police paragraphe */
-                                                                  /* Ligne du haut du paragraphe */
-    padding-top: var( --spacing-4) ;                              /* Espacement entre la ligne et le paragraphe */
-    padding-bottom: var( --spacing-4);                            /* Espacement entre le paragraphe et les articles */
-    line-height: var( --spacing-4);
-    width: 80%;
-    padding-left: 40px;
-    padding-right: 40px;
-}
-
-article {
-    border: solid 2px rgba(128, 128, 128, 0.096);
-    box-shadow: 3px 3px rgba(128, 128, 128, 0.11);
-    margin-bottom: 25px;                                           /* Espacement entre les articles */
-   
-}
-    
-section img {                                                   /* Reglage des images articles */
-    width: 80%;
-    padding-left: 40px;
-    padding-right: 40px;
-}
-
-article h2 {
-    text-align: center;
-    font-family: 'Raleway', sans-serif;
-    ;
-}
-
-
-/*
-{ 
-    background-color: var(--light);
-/* Police, taille et couleur de base sur tout le site */
-
-
-/* ************* FOOTER *************/
 footer {
-    margin-bottom: 200px;
+    margin-bottom: 110px;
 }
 
 footer h2 {
@@ -153,39 +201,29 @@ footer h2 {
     color: var(--main-color);
 }
 
-form {
-    padding: 1em;
-    border: 1px solid #CCC;
-    box-shadow: 0 0 5px grey;
-    margin-bottom: var(--spacing-2);
-    margin-top: var(--spacing-2);
+.footer1 {
+    display: flex;
     align-items: center;
-    margin-left: var(--spacing);
-    margin-right: var(--spacing);
+    justify-content: center;
 }
 
 .formu {
     width: 100%;
     box-sizing: border-box;
     display: flex;
-
     justify-content: center;
 }
 
 input {
     width: 100%;
+    font-family: var(--text-font-size);
 }
 
 textarea {
     width: 100%;
     box-sizing: border-box;
     margin-top: 5px;
-}
-
-.button {
-    text-align: right;
-    margin-top: var(--spacing);
-    width: 150px;
+    font-family: var(--text-font-size);
 }
 
 button {
@@ -199,21 +237,19 @@ button {
     display: flex;
     justify-content: space-between;
     width: 100%;
-
-
 }
-
 
 /* modification de la couleur et de la taille des icones */
-i {
+footer i {
     color: var(--dark);
     font-size: var(--secondaryTitle-size);
-    padding: var(--spacing);
 }
 
-/***** NAV MENU****/
+/* ********************************** */
+/* **************NAV MENU*********** */
+/* ******************************** */
 
-nav {
+.navMobile {
     display: flex;
     /* Transforme le nav en conteneur flexible*/
     flex-direction: column;
@@ -228,7 +264,7 @@ nav {
     /*  Le nav prend tout l'espace disponible en largeur */
 }
 
-nav ul {
+.navMobile ul {
     display: flex;
     /* Transforme le ul en conteneur flexible*/
     flex-wrap: wrap;
@@ -239,16 +275,15 @@ nav ul {
     /* Centre les éléments selon l'axe principal */
     padding: 0;
     /* Supprime le padding par défaut */
-    position: relative;
-    /* position l'élément de façon relative pour permettre déplacer plus facilement */
-    top: 65px;
+    position: absolute;
+    bottom: 6px;
+    margin: 0;
     /* Le déplace vers le bas */
     z-index: 1;
     /* Permet à l'élément d'être au premier plan */
 }
 
-
-nav li {
+.navMobile li {
     list-style-type: none;
     /*  Retire les puces */
     background-color: var(--light);
@@ -265,7 +300,7 @@ nav li {
     /*  Paramètre la transition*/
 }
 
-nav li:hover,
+.navMobile li:hover,
 #navButton:hover,
 .iconeActiv {
     box-shadow: -0px 0px 5px 0px var(--main-color);
@@ -274,7 +309,7 @@ nav li:hover,
     /*  Paramètre la transition*/
 }
 
-#navList a {
+.navMobile #navList a {
     margin: 20px;
     /* Défini la marge extérieure des éléments  */
     opacity: 1;
@@ -285,9 +320,10 @@ nav li:hover,
     /*  Remet le pointeur dans sa position d'origine*/
     transition: opacity 1s, scale 1s;
     /*  Paramètre la transition*/
+    width: 50px;
 }
 
-#navList .hidden {
+.navMobile #navList .hidden {
     opacity: 0;
     /*  Règle l'opacité à 0 pour faire disparaitre les icones*/
     scale: 0;
@@ -298,24 +334,32 @@ nav li:hover,
     /*  Paramètre la transition*/
 }
 
-#navList .none {
-    display: none;
+.navMobile #navList .none {
+    position: absolute;
+    /* Déplace la navList lorsqu'elle est invisible pour ne pas géner la navigation */
 }
 
-#navList a img {
-    margin: 5px;
-    /*  Place les icones */
-    width: 40px;
-    /* Défini la taille des icones  */
+.navMobile #navList a i {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*  Centre les icones */
+
+    color: var(--dark);
+    /* Défini la couleur des icones */
+    font-size: 25px;
+    /* Défini la taille des icones */
 }
 
-#navList .iconeActu {
-    /* Correction de la position et de la taille d'un icone */
-    width: 36px;
-    margin: 2px 7px;
+.navMobile span.fa-stack {
+    width: 50px;
+    height: 50px;
+    /* Défini la largeur et la hauteur des icones */
 }
 
-#navButton {
+.navMobile #navButton {
     border-radius: 50%;
     /* Transforme le bouton en cercle */
     width: 68px;
@@ -338,7 +382,7 @@ nav li:hover,
 
 
 /* Bandeau de couleur */
-.box {
+.navMobile .box {
     background-color: var(--main-color);
     /* Défini la couleur */
     width: 100%;
@@ -348,7 +392,7 @@ nav li:hover,
 
 }
 
-.inBox {
+.navMobile .inBox {
     /* Cercle blanc autour de l'icone du Listenbourg */
     background-color: var(--light);
     /* Défini la couleur */
@@ -362,17 +406,713 @@ nav li:hover,
     /* Place le cercle au milieu de l'écran*/
 }
 
-.box p {
+.navMobile .box p {
     position: fixed;
     bottom: 0;
     right: var(--spacing);
     font-weight: bold;
 }
 
-@media screen and (min-width: 600px) {
+.navWeb {
+    display: none;
+}
+
+
+/* *************************************** */
+/* **************PAGE ACCUEIL************ */
+/* ************************************* */
+.bienvenue {
+    display: flex;
+    justify-content: center;
+}
+
+.bienvenue h1 {
+    color: var(--dark);
+}
+
+/* &&&&&&&&&&&&&&  IMAGES END   &&&&&&&&&&&&&&&&&& */
+
+.index article a {
+    text-decoration: none;
+}
+
+.index article a:hover {
+    color: var(--main-color);
+}
+
+.images-desktop {
+    display: none;
+}
+
+
+
+@media screen and (min-width: 700px) {
+
+    .images-desktop {
+        display: initial;
+
+    }
+
+    .images-galeries {
+        width: 300px;
+        display: flex;
+        justify-content: center;
+
+
+
+    }
+
+    .images-galeries :first-child {
+        align-self: center;
+
+    }
+}
+
+
+
+/* ***************************************** */
+/* **************PAGE HISTOIRE************ */
+/* ************************************** */
+
+.histoire section {
+    padding: 1em;
+    border: 1px solid #CCC;
+    box-shadow: 0 0 5px grey;
+    display: flex;
+    font-size: var(--text-font-size);
+    font-family: var(--main-font);
+    margin-top: 50px;
+}
+
+.histoire li {
+    height: 65px;
+    display: flex;
+    align-items: center;
+}
+
+.histoire p {
+    font-size: var(--text-font-size);
+    margin: 0;
+    padding: 0;
+}
+
+/* ****************************************************** */
+/* Positionnement des éléments de la frise chronologique */
+/* **************************************************** */
+.histoire .frise li {
+    pointer-events: none;
+}
+
+.histoire li.messageDesktop {
+    display: none;
+}
+
+.histoire .frise li:nth-child(1) {
+    margin-top: 15px;
+}
+
+.histoire .frise li:nth-child(2) {
+    margin-top: 396px;
+}
+
+.histoire .frise li:nth-child(3) {
+    margin-top: 388px;
+}
+
+.histoire .frise li:nth-child(4) {
+    margin-top: 420px;
+}
+
+.histoire .frise li:nth-child(5) {
+    margin-top: 348px;
+}
+
+.histoire .frise li:nth-child(6) {
+    margin-top: 358px;
+}
+
+.histoire .frise li:nth-child(7) {
+    margin-top: 355px;
+
+}
+
+.histoire .frise li:nth-child(8) {
+    margin-top: 389px;
+}
+
+.histoire li img {
+    max-width: 250px;
+}
+
+/* Retire les limitations lié à la taille des images */
+.histoire li img.imgAfterClick {
+    max-width: none;
+}
+
+/* Défini les dimensions de la frise chronologique */
+.histoire .frise {
+    width: 45px;
+    border: solid 1px var(--main-color);
+    padding: 1em 0em;
+    list-style: none;
+    margin-right: calc(var(--spacing-4)* 1.7);
+}
+
+/* Défini les dimensions des différents élément de la frise */
+.histoire .frise li {
+    text-align: center;
+    width: 100px;
+}
+
+/* Fait apparaitre les fléches décoratives */
+.histoire .frise li::after {
+    content: "";
+    height: 23px;
+    width: 50px;
+    background: url(/assets/Arrow2.png) no-repeat;
+    display: block;
+    background-size: contain;
+}
+
+/* Défini les dates de la frise chronologique*/
+.histoire .frise time {
+    width: 45px;
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+/* Défini le bloc des évenèments historiques*/
+.histoire .evenements {
+    padding: 3em 1em;
+    border: 1px solid #CCC;
+    box-shadow: 0 0 5px grey;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 1em 0em;
+}
+
+/* Affiche les évènements en colonnes */
+.histoire .evenementHistoire {
+    flex-direction: column;
+    height: 100%;
+    margin: 10px 0px;
+}
+
+/* Ajoute une marge extérieure au dessus et en dessous des images des évènements historiques */
+.histoire .evenements li img {
+    margin: 20px 0;
+}
+
+
+.histoire .evenementHistoire figcaption {
+    text-align: center;
+}
+
+/* Affichage des images en grand après le clic (Activé en JS) */
+.histoire .evenements img.imgAfterClick {
+    position: absolute;
+    padding: 0;
+    left: 0;
+    width: 90%;
+    border: 5px solid #CCC;
+    box-shadow: 0 0 5px grey;
+    margin: 0% 4%;
+}
+
+/* ***************************************** */
+/* ************PAGE PRESENTATION*********** */
+/* ************************************** */
+
+
+
+.index .article_presentation {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.presentationPage section p {
+    text-align: justify;
+}
+
+.miniature {
+    height: 150px;
+    width: 150px;
+    margin: 5px;
+}
+
+.miniature-p {
+    font-size: 12pt;
+}
+
+.tableau_regions {
+    font-family: var(--main-font);
+    font-size: var(--secondaryTitle-size);
+    color: var(--dark);
+}
+
+.tableau_regions li {
+    margin-left: 20px;
+}
+
+/* ***************************************** */
+/* **************PAGE GALERIE************* */
+/* ************************************** */
+
+
+.galery {
+    padding: 20px;
+    background-color: var(--light);
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+#popup-bg {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 3;
+    justify-content: center;
+    align-items: center;
+}
+
+#popup-bg.active {
+    display: flex;
+}
+
+#popup-content {
+    max-width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#popup-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#popup-close:hover {
+    background-color: rgb(4, 0, 255);
+}
+
+#popup-img {
+    width: 100%;
+    height: auto;
+}
+
+#grid {
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    height: 100%;
+    width: 100%;
+
+}
+
+.grid-item {
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.grid-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+.grid-img:hover {
+    transform: scale(1.2);
+}
+
+/* ***************************************** */
+/* *************PAGE ACTUALITES************ */
+/* ************************************** */
+.articleActu {
+    margin-top: 0;
+}
+
+.articleActu1,
+.articleActu2,
+.articleActu3,
+.articleActu4,
+.articleActu5 {
+    padding: 1em;
+    margin-top: var(--spacing-2);
+    margin-bottom: var(--spacing-2);
+    margin-left: var(--spacing);
+    margin-right: var(--spacing);
+    align-items: center;
+    border: 1px solid #CCC;
+    box-shadow: 0 0 5px grey;
+    width: auto;
+    text-align: center;
+}
+
+.articleActu5 {
+    display: none;
+}
+
+.act-titreH2 {
+    font-family: var(--secondaryTitle-font);
+    font-size: var(--secondaryTitle-size);
+    color: var(--main-color);
+    margin: var(--spacing);
+    height: auto;
+}
+
+/* ********************* */
+/* ******************** */
+/* *** MEDIA QUERIES** */
+/* ****************** */
+/* ***************** */
+
+/* ************************************* */
+/* **************NAVBAR WEB************ */
+/* *********************************** */
+
+@media screen and (min-width: 749px) {
+    .navWeb {
+        display: flex;
+        width: 97%;
+        justify-content: space-between;
+
+    }
+
+    .navWeb img {
+        width: 60px;
+    }
+
+    .navWeb .navList {
+        display: flex;
+        gap: 30px;
+        list-style: none;
+    }
+
+    .navWeb .navList li a {
+        list-style: none;
+        font-size: 28px;
+        color: var(--light);
+        text-decoration: none;
+        text-shadow: 0px 5px 5px rgb(0, 0, 0);
+        font-weight: bold;
+        transition: color 0.5s;
+    }
+
+    .navWeb .navList li a:hover {
+        color: var(--main-color);
+        transition: color 0.5s;
+    }
+
+    .navWeb .navList li a.activeMenu {
+        color: var(--main-color);
+    }
+
+    .titleGroup {
+        gap: 60px;
+        justify-content: flex-start;
+    }
+
+    .navList,
+    #navButton,
+    .inBox {
+        display: none;
+    }
+
+    .navMobile {
+        position: initial;
+    }
+
+    .navMobile .box p {
+        position: relative;
+        text-align: end;
+        margin-top: 30px;
+        margin-right: 20px;
+    }
+}
+
+/* ***************************************** */
+/* **************PAGE HISTOIRE************ */
+/* ************************************** */
+
+@media screen and (min-width: 749px) {
+    .histoire section {
+        flex-direction: column;
+        width: 95%;
+        margin: auto;
+    }
+
+    .histoire .frise {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .histoire .frise li {
+        margin: 0;
+        font-size: var(--secondaryTitle-size);
+        pointer-events: all;
+        cursor: pointer;
+    }
+
+    .histoire .frise li::after,
+    .histoire .noneDesktop {
+        display: none;
+    }
+
+    .histoire .evenements {
+        min-height: 500px;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .histoire .evenementHistoire {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .histoire .evenementHistoire p {
+        font-size: 40px;
+        width: 40%;
+        line-height: 49px;
+    }
+
+    .histoire .evenementHistoire div {
+        text-align: center;
+        width: 300px;
+    }
+
+    .histoire .evenementHistoire figcaption {
+        font-size: var(--secondaryTitle-size);
+    }
+
+    .histoire .frise li:nth-child(1),
+    .histoire .frise li:nth-child(2),
+    .histoire .frise li:nth-child(3),
+    .histoire .frise li:nth-child(4),
+    .histoire .frise li:nth-child(5),
+    .histoire .frise li:nth-child(6),
+    .histoire .frise li:nth-child(7),
+    .histoire .frise li:nth-child(8) {
+        margin-top: 0px;
+    }
+
+    .imgClick {
+        pointer-events: none;
+    }
+
+    .histoire li.messageDesktop {
+        display: flex;
+
+    }
+
+    .histoire li.messageDesktop p {
+        font-size: 40px;
+        width: 60%;
+        text-align: center;
+        margin: auto;
+        line-height: 70px;
+    }
+
+}
+
+
+@media screen and (min-width: 749px) {
+    form {
+        width: 100%;
+        padding: 1em;
+        border: 1px solid #CCC;
+        box-shadow: 0 0 5px grey;
+        margin-bottom: var(--spacing-2);
+        margin-top: var(--spacing-2);
+        align-items: center;
+        margin-left: var(--spacing);
+        margin-right: var(--spacing);
+    }
+
+    .footer1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1em;
+    }
+
+    .social {
+        width: 100%;
+        padding: 1em;
+        /* border: 1px solid #CCC;
+        box-shadow: 0 0 5px grey; */
+        margin-bottom: var(--spacing-2);
+        margin-top: var(--spacing-2);
+        align-items: center;
+        margin-left: var(--spacing);
+        margin-right: var(--spacing);
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    /* modification de la couleur et de la taille des icones */
+    footer i {
+        font-size: 24px;
+        padding: var(--spacing);
+
+    }
+
     .titleGroup {
         background: url(assets/banniere_web.jpg) no-repeat center top;
         background-size: cover;
-        height: 350px;
+        height: 450px;
     }
+
+    .gridActu {
+        width: 98.2%;
+        margin: auto;
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 0.5fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+    }
+
+    .articleActu4 {
+        grid-area: 1 / 1 / 3 / 2;
+    }
+
+    .articleActu2 {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .articleActu3 {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+
+    .articleActu1 {
+        grid-area: 3 / 1 / 4 / 3;
+    }
+
+    .articleActu5 {
+        display: block;
+        width: 300px;
+        grid-area: 1 / 3 / 4 / 4;
+    }
+
+    .actText {
+        padding-bottom: 0px;
+    }
+}
+
+@media screen and (max-width: 748px) {
+    .footer1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1em;
+        border: 1px solid #CCC;
+        box-shadow: 0 0 5px grey;
+        margin-bottom: var(--spacing-2);
+        margin-top: var(--spacing-2);
+        margin-left: var(--spacing);
+        margin-right: var(--spacing);
+
+    }
+
+    button {
+        margin-top: var(--spacing);
+        width: 150px;
+    }
+
+    #socialTitle {
+        visibility: hidden;
+    }
+
+    .social {
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+    }
+
+    .images-galeries {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+@media screen and (min-width: 748px) {
+    .titleGroup {
+        background: url(assets/banniere_web.jpg) no-repeat center top;
+        background-size: cover;
+        height: 450px;
+    }
+}
+
+#landParallax {
+    margin: 100px 0 0 0;
+}
+
+.parallax {
+    height: 50vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-image: url("./asset/poudlar.png"),
+      linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(53, 53, 142, 0) 35%); */
+}
+
+.parallax1 {
+    background-image: url("./assets/arbre-soleil.jpg");
+    /* background: rgb(0, 0, 0); */
+}
+
+.parallax2 {
+    background-image: url("./galery/photoGalery-16.jpg");
+    /* background: rgb(0, 0, 0); */
+}
+
+.landHistoire {
+    display: flex;
+    justify-content: center;
+}
+
+.images-end {
+    display: flex;
+    justify-content: center;
 }
