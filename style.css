@@ -32,6 +32,11 @@
 /* ************************************** */
 
 /* Police, taille et couleur de base sur tout le site */
+article {
+
+    width: 95%;
+    margin: 100px 0 0 0;
+}
 
 body {
     margin: 0;
@@ -40,7 +45,7 @@ body {
 }
 
 main {
-    width: 95%;
+    width: 100%;
     margin: auto;
 }
 
@@ -85,8 +90,9 @@ section p {
 section img {
     /* Reglage des images articles */
     width: 80%;
-    padding-left: 40px;
-    padding-right: 40px;
+    /* padding-left: 40px;
+    padding-right: 40px; */
+    box-shadow: 0px 14px 14px #0000004d;
 }
 
 article h2 {
@@ -94,10 +100,17 @@ article h2 {
     font-family: 'Raleway', 'sans-serif';
 }
 
+.tourisme {
+    display: flex;
+    justify-content: center;
+}
+
 /* Sélectionne  les articles  présents dans les pages index et tourisme */
 .index article,
+/* .pointInteret div,
+.visa div,
+.covid div, */
 .tourisme article {
-
     border: solid 2px rgba(128, 128, 128, 0.096);
     /* Défini la bordure autour des articles */
     box-shadow: 3px 3px rgba(128, 128, 128, 0.11);
@@ -117,6 +130,10 @@ article h2 {
 /* Sélectionne  les paragraphes de toutes les sections présentes dans les pages index et tourisme */
 
 .index section p,
+.pointInteret p,
+.seRendreAuListenbourg p,
+.visa p,
+.covid p,
 .tourisme section p {
     width: 80%;
     /*  Défini la largeur*/
@@ -238,7 +255,7 @@ footer i {
 /* **************NAV MENU*********** */
 /* ******************************** */
 
-nav {
+.navMobile {
     display: flex;
     /* Transforme le nav en conteneur flexible*/
     flex-direction: column;
@@ -253,7 +270,7 @@ nav {
     /*  Le nav prend tout l'espace disponible en largeur */
 }
 
-nav ul {
+.navMobile ul {
     display: flex;
     /* Transforme le ul en conteneur flexible*/
     flex-wrap: wrap;
@@ -272,7 +289,7 @@ nav ul {
     /* Permet à l'élément d'être au premier plan */
 }
 
-nav li {
+.navMobile li {
     list-style-type: none;
     /*  Retire les puces */
     background-color: var(--light);
@@ -289,7 +306,7 @@ nav li {
     /*  Paramètre la transition*/
 }
 
-nav li:hover,
+.navMobile li:hover,
 #navButton:hover,
 .iconeActiv {
     box-shadow: -0px 0px 5px 0px var(--main-color);
@@ -298,7 +315,7 @@ nav li:hover,
     /*  Paramètre la transition*/
 }
 
-#navList a {
+.navMobile #navList a {
     margin: 20px;
     /* Défini la marge extérieure des éléments  */
     opacity: 1;
@@ -312,7 +329,7 @@ nav li:hover,
     width: 50px;
 }
 
-#navList .hidden {
+.navMobile #navList .hidden {
     opacity: 0;
     /*  Règle l'opacité à 0 pour faire disparaitre les icones*/
     scale: 0;
@@ -323,12 +340,12 @@ nav li:hover,
     /*  Paramètre la transition*/
 }
 
-#navList .none {
+.navMobile #navList .none {
     position: absolute;
     /* Déplace la navList lorsqu'elle est invisible pour ne pas géner la navigation */
 }
 
-#navList a i {
+.navMobile #navList a i {
 
     position: absolute;
     top: 50%;
@@ -342,13 +359,13 @@ nav li:hover,
     /* Défini la taille des icones */
 }
 
-span.fa-stack {
+.navMobile span.fa-stack {
     width: 50px;
     height: 50px;
     /* Défini la largeur et la hauteur des icones */
 }
 
-#navButton {
+.navMobile #navButton {
     border-radius: 50%;
     /* Transforme le bouton en cercle */
     width: 68px;
@@ -371,7 +388,7 @@ span.fa-stack {
 
 
 /* Bandeau de couleur */
-.box {
+.navMobile .box {
     background-color: var(--main-color);
     /* Défini la couleur */
     width: 100%;
@@ -381,7 +398,7 @@ span.fa-stack {
 
 }
 
-.inBox {
+.navMobile .inBox {
     /* Cercle blanc autour de l'icone du Listenbourg */
     background-color: var(--light);
     /* Défini la couleur */
@@ -395,26 +412,31 @@ span.fa-stack {
     /* Place le cercle au milieu de l'écran*/
 }
 
-.box p {
+.navMobile .box p {
     position: fixed;
     bottom: 0;
     right: var(--spacing);
     font-weight: bold;
 }
 
+.navWeb {
+    display: none;
+}
+
+
 /* *************************************** */
 /* **************PAGE ACCUEIL************ */
 /* ************************************* */
+.bienvenue {
+    display: flex;
+    justify-content: center;
+}
 
 .bienvenue h1 {
     color: var(--dark);
 }
 
 /* &&&&&&&&&&&&&&  IMAGES END   &&&&&&&&&&&&&&&&&& */
-
-.cadre img {
-    padding-top: 20px;
-}
 
 .index article a {
     text-decoration: none;
@@ -423,6 +445,36 @@ span.fa-stack {
 .index article a:hover {
     color: var(--main-color);
 }
+
+.images-desktop {
+    display: none;
+}
+
+
+
+@media screen and (min-width: 700px) {
+
+    .images-desktop {
+        display: initial;
+
+    }
+
+    .images-galeries {
+        width: 300px;
+        display: flex;
+        justify-content: center;
+
+
+
+    }
+
+    .images-galeries :first-child {
+        align-self: center;
+
+    }
+}
+
+
 
 /* ***************************************** */
 /* **************PAGE HISTOIRE************ */
@@ -435,6 +487,7 @@ span.fa-stack {
     display: flex;
     font-size: var(--text-font-size);
     font-family: var(--main-font);
+    margin-top: 50px;
 }
 
 .histoire li {
@@ -443,41 +496,54 @@ span.fa-stack {
     align-items: center;
 }
 
+.histoire p {
+    font-size: var(--text-font-size);
+    margin: 0;
+    padding: 0;
+}
+
 /* ****************************************************** */
 /* Positionnement des éléments de la frise chronologique */
 /* **************************************************** */
-.histoire li:nth-child(1) {
-    margin-top: calc(var(--spacing)*2);
+.histoire .frise li {
+    pointer-events: none;
 }
 
-.histoire li:nth-child(2) {
-    margin-top: 350px;
+.histoire li.messageDesktop {
+    display: none;
 }
 
-.histoire li:nth-child(3) {
-    margin-top: 300px;
+.histoire .frise li:nth-child(1) {
+    margin-top: 15px;
 }
 
-.histoire li:nth-child(4) {
-    margin-top: 300px;
+.histoire .frise li:nth-child(2) {
+    margin-top: 396px;
 }
 
-.histoire li:nth-child(5) {
-    margin-top: 260px;
+.histoire .frise li:nth-child(3) {
+    margin-top: 388px;
 }
 
-.histoire li:nth-child(6) {
-    margin-top: 280px;
+.histoire .frise li:nth-child(4) {
+    margin-top: 420px;
 }
 
-.histoire li:nth-child(7) {
-    margin-top: 270px;
+.histoire .frise li:nth-child(5) {
+    margin-top: 348px;
+}
+
+.histoire .frise li:nth-child(6) {
+    margin-top: 358px;
+}
+
+.histoire .frise li:nth-child(7) {
+    margin-top: 355px;
 
 }
 
-.histoire li:nth-child(8) {
-    margin-top: 310px;
-    margin-bottom: 180px;
+.histoire .frise li:nth-child(8) {
+    margin-top: 389px;
 }
 
 .histoire li img {
@@ -523,10 +589,9 @@ span.fa-stack {
 
 /* Défini le bloc des évenèments historiques*/
 .histoire .evenements {
-    padding: 1em;
+    padding: 3em 1em;
     border: 1px solid #CCC;
     box-shadow: 0 0 5px grey;
-    width: 100%;
     display: flex;
     flex-direction: column;
     list-style: none;
@@ -534,13 +599,20 @@ span.fa-stack {
 }
 
 /* Affiche les évènements en colonnes */
-.histoire .evenements li {
+.histoire .evenementHistoire {
     flex-direction: column;
+    height: 100%;
+    margin: 10px 0px;
 }
 
 /* Ajoute une marge extérieure au dessus et en dessous des images des évènements historiques */
 .histoire .evenements li img {
-    margin: 10px 0;
+    margin: 20px 0;
+}
+
+
+.histoire .evenementHistoire figcaption {
+    text-align: center;
 }
 
 /* Affichage des images en grand après le clic (Activé en JS) */
@@ -564,6 +636,10 @@ span.fa-stack {
     display: flex;
     align-items: center;
     flex-direction: row;
+}
+
+.presentationPage section p {
+    text-align: justify;
 }
 
 .miniature {
@@ -688,17 +764,33 @@ span.fa-stack {
 /* ***************************************** */
 /* *************PAGE ACTUALITES************ */
 /* ************************************** */
-
+.bienvenue,
 .articleActu {
+    margin-top: 0;
+}
+
+.pointInteret div,
+.visa div,
+.covid div,
+.articleActu1,
+.articleActu2,
+.articleActu3,
+.articleActu4,
+.articleActu5 {
     padding: 1em;
     margin-top: var(--spacing-2);
     margin-bottom: var(--spacing-2);
     margin-left: var(--spacing);
     margin-right: var(--spacing);
-    padding: 1em;
     align-items: center;
     border: 1px solid #CCC;
     box-shadow: 0 0 5px grey;
+    width: auto;
+    text-align: center;
+}
+
+.articleActu5 {
+    display: none;
 }
 
 .act-titreH2 {
@@ -709,27 +801,162 @@ span.fa-stack {
     height: auto;
 }
 
-.articleActu img {
-    /* Reglage des images articles */
-    padding-left: 0px;
-    padding-right: 0px;
-}
-
-.img_actu {
-    width: 100%;
-    margin-top: var(--spacing);
-}
-
-.act-articleText {
-    text-align: justify;
-}
-
-
 /* ********************* */
 /* ******************** */
 /* *** MEDIA QUERIES** */
 /* ****************** */
 /* ***************** */
+
+/* ************************************* */
+/* **************NAVBAR WEB************ */
+/* *********************************** */
+
+@media screen and (min-width: 749px) {
+    .navWeb {
+        display: flex;
+        width: 97%;
+        justify-content: space-between;
+
+    }
+
+    .navWeb img {
+        width: 60px;
+    }
+
+    .navWeb .navList {
+        display: flex;
+        gap: 30px;
+        list-style: none;
+    }
+
+    .navWeb .navList li a {
+        list-style: none;
+        font-size: 28px;
+        color: var(--light);
+        text-decoration: none;
+        text-shadow: 0px 5px 5px rgb(0, 0, 0);
+        font-weight: bold;
+        transition: color 0.5s;
+    }
+
+    .navWeb .navList li a:hover {
+        color: var(--main-color);
+        transition: color 0.5s;
+    }
+
+    .navWeb .navList li a.activeMenu {
+        color: var(--main-color);
+    }
+
+    .titleGroup {
+        gap: 60px;
+        justify-content: flex-start;
+    }
+
+    .navList,
+    #navButton,
+    .inBox {
+        display: none;
+    }
+
+    .navMobile {
+        position: initial;
+    }
+
+    .navMobile .box p {
+        position: relative;
+        text-align: end;
+        margin-top: 30px;
+        margin-right: 20px;
+    }
+}
+
+/* ***************************************** */
+/* **************PAGE HISTOIRE************ */
+/* ************************************** */
+
+@media screen and (min-width: 749px) {
+    .histoire section {
+        flex-direction: column;
+        width: 95%;
+        margin: auto;
+    }
+
+    .histoire .frise {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .histoire .frise li {
+        margin: 0;
+        font-size: var(--secondaryTitle-size);
+        pointer-events: all;
+        cursor: pointer;
+    }
+
+    .histoire .frise li::after,
+    .histoire .noneDesktop {
+        display: none;
+    }
+
+    .histoire .evenements {
+        min-height: 500px;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .histoire .evenementHistoire {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .histoire .evenementHistoire p {
+        font-size: 40px;
+        width: 40%;
+        line-height: 49px;
+    }
+
+    .histoire .evenementHistoire div {
+        text-align: center;
+        width: 300px;
+    }
+
+    .histoire .evenementHistoire figcaption {
+        font-size: var(--secondaryTitle-size);
+    }
+
+    .histoire .frise li:nth-child(1),
+    .histoire .frise li:nth-child(2),
+    .histoire .frise li:nth-child(3),
+    .histoire .frise li:nth-child(4),
+    .histoire .frise li:nth-child(5),
+    .histoire .frise li:nth-child(6),
+    .histoire .frise li:nth-child(7),
+    .histoire .frise li:nth-child(8) {
+        margin-top: 0px;
+    }
+
+    .imgClick {
+        pointer-events: none;
+    }
+
+    .histoire li.messageDesktop {
+        display: flex;
+
+    }
+
+    .histoire li.messageDesktop p {
+        font-size: 40px;
+        width: 60%;
+        text-align: center;
+        margin: auto;
+        line-height: 70px;
+    }
+
+}
 
 
 @media screen and (min-width: 749px) {
@@ -784,7 +1011,7 @@ span.fa-stack {
 
     }
 
-    .pointInteret article {
+    .pointInteret div {
         border: none;
         /* enlève la bordure autour des articles */
         box-shadow: none;
@@ -793,12 +1020,14 @@ span.fa-stack {
 
 
     .pointInteret img {
-        width: 300px;
+        width: 3fr;
         height: 250px;
+        padding: 40px;
     }
 
     .pointInteret h2 {
         font-size: var(--text-font-size);
+        text-align: center;
     }
 
     .pointInteret p {
@@ -806,18 +1035,22 @@ span.fa-stack {
         display: none;
     }
 
-    .seRendreAuListenbourg article {
+    .seRendreAuListenbourg div {
         border: none;
         /* enlève la bordure autour des articles */
         box-shadow: none;
         /* enlève l'ombre autour des articles */
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
     }
 
     .seRendreAuListenbourg img {
         width: 700px;
+
     }
-
-
 
     .visa img,
     .covid img {
@@ -825,18 +1058,25 @@ span.fa-stack {
         height: 200px;
     }
 
-    .covid article,
-    .visa article {
+    .covid div,
+    .visa div {
         border: none;
         box-shadow: none;
         box-sizing: border-box;
         flex: none;
     }
 
+    .infoImp {
+        display: flex;
+        flex-direction: column;
+
+    }
+
     .flotteR {
         float: right;
         display: flex;
         align-items: center;
+        width: 100%;
 
     }
 
@@ -845,8 +1085,61 @@ span.fa-stack {
         display: flex;
         align-items: center;
         flex-direction: row-reverse;
+        width: 100%;
     }
-}
+
+    .flotteR img,
+    .flotteL img {
+        padding: 20px;
+        box-shadow: none;
+    }
+
+
+
+
+    .titleGroup {
+        background: url(assets/banniere_web.jpg) no-repeat center top;
+        background-size: cover;
+        height: 450px;
+    }
+
+    .gridActu {
+        width: 98.2%;
+        margin: auto;
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 0.5fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+    }
+
+    .articleActu4 {
+        grid-area: 1 / 1 / 3 / 2;
+    }
+
+    .articleActu2 {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .articleActu3 {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+
+    .articleActu1 {
+        grid-area: 3 / 1 / 4 / 3;
+    }
+
+    .articleActu5 {
+        display: block;
+        width: 300px;
+        grid-area: 1 / 3 / 4 / 4;
+    }
+
+    .actText {
+        padding-bottom: 0px;
+    }
+
 }
 
 
@@ -861,7 +1154,6 @@ span.fa-stack {
         box-shadow: 0 0 5px grey;
         margin-bottom: var(--spacing-2);
         margin-top: var(--spacing-2);
-        align-items: center;
         margin-left: var(--spacing);
         margin-right: var(--spacing);
 
@@ -882,6 +1174,12 @@ span.fa-stack {
         display: flex;
         justify-content: center;
     }
+
+    .images-galeries {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 
@@ -889,6 +1187,52 @@ span.fa-stack {
     .titleGroup {
         background: url(assets/banniere_web.jpg) no-repeat center top;
         background-size: cover;
-        height: 350px;
+        height: 450px;
     }
+}
+
+#landParallax {
+    margin: 100px 0 0 0;
+}
+
+.parallax {
+    height: 50vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-image: url("./asset/poudlar.png"),
+      linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(53, 53, 142, 0) 35%); */
+}
+
+.parallax1 {
+    background-image: url("./assets/arbre-soleil.jpg");
+    /* background: rgb(0, 0, 0); */
+}
+
+.parallax2 {
+    background-image: url("./galery/photoGalery-16.jpg");
+    /* background: rgb(0, 0, 0); */
+}
+
+.landHistoire {
+    display: flex;
+    justify-content: center;
+}
+
+.images-end {
+    display: flex;
+    justify-content: center;
+}
+
+.seRendreAuListenbourg,
+.pointInteret,
+.covid,
+.visa {
+    text-align: center;
+    padding: 1em;
+}
+
+.seRendreAuListenbourg img {
+    padding: 40pxx;
 }
