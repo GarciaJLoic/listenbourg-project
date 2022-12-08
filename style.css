@@ -107,8 +107,10 @@ article h2 {
 
 /* Sélectionne  les articles  présents dans les pages index et tourisme */
 .index article,
+/* .pointInteret div,
+.visa div,
+.covid div, */
 .tourisme article {
-
     border: solid 2px rgba(128, 128, 128, 0.096);
     /* Défini la bordure autour des articles */
     box-shadow: 3px 3px rgba(128, 128, 128, 0.11);
@@ -128,6 +130,10 @@ article h2 {
 /* Sélectionne  les paragraphes de toutes les sections présentes dans les pages index et tourisme */
 
 .index section p,
+.pointInteret p,
+.seRendreAuListenbourg p,
+.visa p,
+.covid p,
 .tourisme section p {
     width: 80%;
     /*  Défini la largeur*/
@@ -758,10 +764,14 @@ footer i {
 /* ***************************************** */
 /* *************PAGE ACTUALITES************ */
 /* ************************************** */
+.bienvenue,
 .articleActu {
     margin-top: 0;
 }
 
+.pointInteret div,
+.visa div,
+.covid div,
 .articleActu1,
 .articleActu2,
 .articleActu3,
@@ -991,6 +1001,102 @@ footer i {
 
     }
 
+    /* **********************Tourisme - desktop********************* */
+    .pointInteret {
+        display: flex;
+        /* Transforme le nav en conteneur flexible*/
+        flex-direction: row;
+        /*  Oriente les éléments contenu dans les articles en ligne*/
+        justify-content: center;
+
+    }
+
+    .pointInteret div {
+        border: none;
+        /* enlève la bordure autour des articles */
+        box-shadow: none;
+        /* enlève l'ombre autour des articles */
+    }
+
+
+    .pointInteret img {
+        width: 3fr;
+        height: 250px;
+        padding: 40px;
+    }
+
+    .pointInteret h2 {
+        font-size: var(--text-font-size);
+        text-align: center;
+    }
+
+    .pointInteret p {
+        visibility: hidden;
+        display: none;
+    }
+
+    .seRendreAuListenbourg div {
+        border: none;
+        /* enlève la bordure autour des articles */
+        box-shadow: none;
+        /* enlève l'ombre autour des articles */
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .seRendreAuListenbourg img {
+        width: 700px;
+
+    }
+
+    .visa img,
+    .covid img {
+        width: 300px;
+        height: 200px;
+    }
+
+    .covid div,
+    .visa div {
+        border: none;
+        box-shadow: none;
+        box-sizing: border-box;
+        flex: none;
+    }
+
+    .infoImp {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .flotteR {
+        float: right;
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+    }
+
+    .flotteL {
+        float: left;
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        width: 100%;
+    }
+
+    .flotteR img,
+    .flotteL img {
+        padding: 20px;
+        box-shadow: none;
+    }
+
+
+
+
     .titleGroup {
         background: url(assets/banniere_web.jpg) no-repeat center top;
         background-size: cover;
@@ -1033,7 +1139,9 @@ footer i {
     .actText {
         padding-bottom: 0px;
     }
+
 }
+
 
 @media screen and (max-width: 748px) {
     .footer1 {
@@ -1115,4 +1223,16 @@ footer i {
 .images-end {
     display: flex;
     justify-content: center;
+}
+
+.seRendreAuListenbourg,
+.pointInteret,
+.covid,
+.visa {
+    text-align: center;
+    padding: 1em;
+}
+
+.seRendreAuListenbourg img {
+    padding: 40pxx;
 }
