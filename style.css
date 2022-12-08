@@ -32,7 +32,11 @@
 /* ************************************** */
 
 /* Police, taille et couleur de base sur tout le site */
+article {
 
+    width: 95%;
+    margin: 100px 0 0 0;
+}
 body {
     margin: 0;
     padding: 0;
@@ -40,7 +44,7 @@ body {
 }
 
 main {
-    width: 95%;
+    width: 100%;
     margin: auto;
 }
 
@@ -85,15 +89,19 @@ section p {
 section img {
     /* Reglage des images articles */
     width: 80%;
-    padding-left: 40px;
-    padding-right: 40px;
+    /* padding-left: 40px;
+    padding-right: 40px; */
+    box-shadow: 0px 14px 14px #0000004d;
 }
 
 article h2 {
     text-align: center;
     font-family: 'Raleway', 'sans-serif';
 }
-
+.tourisme {
+    display: flex;
+    justify-content: center;
+}
 /* Sélectionne  les articles  présents dans les pages index et tourisme */
 .index article,
 .tourisme article {
@@ -405,7 +413,10 @@ span.fa-stack {
 /* *************************************** */
 /* **************PAGE ACCUEIL************ */
 /* ************************************* */
-
+.bienvenue {
+    display: flex;
+    justify-content: center;
+}
 .bienvenue h1 {
     color: var(--dark);
 }
@@ -413,9 +424,8 @@ span.fa-stack {
 /* &&&&&&&&&&&&&&  IMAGES END   &&&&&&&&&&&&&&&&&& */
 
 .cadre img {
-    padding-top: 20px;
+    /* padding-top: 20px; */
 }
-
 .index article a {
     text-decoration: none;
 }
@@ -423,6 +433,34 @@ span.fa-stack {
 .index article a:hover {
     color: var(--main-color);
 }
+.images-desktop{ 
+    display: none;
+}
+
+    
+    
+@media screen and (min-width: 700px){  
+
+    .images-desktop{
+    display: initial;
+    
+ }   
+   .images-galeries{
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    
+    
+
+   }
+
+   .images-galeries :first-child {
+    align-self: center;
+
+   }
+   }
+    
+       
 
 /* ***************************************** */
 /* **************PAGE HISTOIRE************ */
@@ -807,6 +845,11 @@ span.fa-stack {
         display: flex;
         justify-content: center;
     }
+    .images-galeries{
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
 }
 
 
@@ -817,3 +860,32 @@ span.fa-stack {
         height: 350px;
     }
 }
+#landParallax {
+    margin: 100px 0 0 0;
+}
+.parallax {
+    height: 50vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-image: url("./asset/poudlar.png"),
+      linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(53, 53, 142, 0) 35%); */
+  }
+
+  .parallax1 {
+    background-image: url("./assets/arbre-soleil.jpg");
+    /* background: rgb(0, 0, 0); */
+  }
+  .parallax2 {
+    background-image: url("./galery/photoGalery-16.jpg");
+    /* background: rgb(0, 0, 0); */
+  }
+  .landHistoire {
+    display: flex;
+    justify-content: center;
+  }
+  .images-end{
+    display: flex;
+    justify-content: center;
+  }
