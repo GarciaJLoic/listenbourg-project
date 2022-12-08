@@ -40,7 +40,7 @@ body {
 }
 
 main {
-    width: 95%;
+    width: 100%;
     margin: auto;
 }
 
@@ -238,7 +238,7 @@ footer i {
 /* **************NAV MENU*********** */
 /* ******************************** */
 
-nav {
+.navMobile {
     display: flex;
     /* Transforme le nav en conteneur flexible*/
     flex-direction: column;
@@ -253,7 +253,7 @@ nav {
     /*  Le nav prend tout l'espace disponible en largeur */
 }
 
-nav ul {
+.navMobile ul {
     display: flex;
     /* Transforme le ul en conteneur flexible*/
     flex-wrap: wrap;
@@ -272,7 +272,7 @@ nav ul {
     /* Permet à l'élément d'être au premier plan */
 }
 
-nav li {
+.navMobile li {
     list-style-type: none;
     /*  Retire les puces */
     background-color: var(--light);
@@ -289,7 +289,7 @@ nav li {
     /*  Paramètre la transition*/
 }
 
-nav li:hover,
+.navMobile li:hover,
 #navButton:hover,
 .iconeActiv {
     box-shadow: -0px 0px 5px 0px var(--main-color);
@@ -298,7 +298,7 @@ nav li:hover,
     /*  Paramètre la transition*/
 }
 
-#navList a {
+.navMobile #navList a {
     margin: 20px;
     /* Défini la marge extérieure des éléments  */
     opacity: 1;
@@ -312,7 +312,7 @@ nav li:hover,
     width: 50px;
 }
 
-#navList .hidden {
+.navMobile #navList .hidden {
     opacity: 0;
     /*  Règle l'opacité à 0 pour faire disparaitre les icones*/
     scale: 0;
@@ -323,12 +323,12 @@ nav li:hover,
     /*  Paramètre la transition*/
 }
 
-#navList .none {
+.navMobile #navList .none {
     position: absolute;
     /* Déplace la navList lorsqu'elle est invisible pour ne pas géner la navigation */
 }
 
-#navList a i {
+.navMobile #navList a i {
 
     position: absolute;
     top: 50%;
@@ -342,13 +342,13 @@ nav li:hover,
     /* Défini la taille des icones */
 }
 
-span.fa-stack {
+.navMobile span.fa-stack {
     width: 50px;
     height: 50px;
     /* Défini la largeur et la hauteur des icones */
 }
 
-#navButton {
+.navMobile #navButton {
     border-radius: 50%;
     /* Transforme le bouton en cercle */
     width: 68px;
@@ -371,7 +371,7 @@ span.fa-stack {
 
 
 /* Bandeau de couleur */
-.box {
+.navMobile .box {
     background-color: var(--main-color);
     /* Défini la couleur */
     width: 100%;
@@ -381,7 +381,7 @@ span.fa-stack {
 
 }
 
-.inBox {
+.navMobile .inBox {
     /* Cercle blanc autour de l'icone du Listenbourg */
     background-color: var(--light);
     /* Défini la couleur */
@@ -395,12 +395,17 @@ span.fa-stack {
     /* Place le cercle au milieu de l'écran*/
 }
 
-.box p {
+.navMobile .box p {
     position: fixed;
     bottom: 0;
     right: var(--spacing);
     font-weight: bold;
 }
+
+.navWeb {
+    display: none;
+}
+
 
 /* *************************************** */
 /* **************PAGE ACCUEIL************ */
@@ -754,7 +759,62 @@ span.fa-stack {
 /* ****************** */
 /* ***************** */
 
+/* ************************************* */
+/* **************NAVBAR WEB************ */
+/* *********************************** */
 
+@media screen and (min-width: 749px) {
+    .navWeb {
+        display: flex;
+        width: 97%;
+        justify-content: space-between;
+
+    }
+
+    .navWeb img {
+        width: 60px;
+    }
+
+    .navWeb .navList {
+        display: flex;
+        gap: 30px;
+        list-style: none;
+    }
+
+    .navWeb .navList li a {
+        list-style: none;
+        font-size: 28px;
+        color: var(--light);
+        text-decoration: none;
+        text-shadow: 0px 5px 5px rgb(0, 0, 0);
+        font-weight: bold;
+        transition: color 0.5s;
+    }
+
+    .navWeb .navList li a:hover {
+        color: var(--main-color);
+        transition: color 0.5s;
+    }
+
+    .navWeb .navList li a.activeMenu {
+        color: var(--main-color);
+    }
+
+    .titleGroup {
+        gap: 60px;
+        justify-content: flex-start;
+    }
+
+    .navList,
+    #navButton,
+    .inBox {
+        display: none;
+    }
+
+    .navMobile {
+        position: initial;
+    }
+}
 
 /* ***************************************** */
 /* **************PAGE HISTOIRE************ */
@@ -839,12 +899,6 @@ span.fa-stack {
         line-height: 70px;
     }
 
-    /* .click {
-        flex-direction: row;
-        justify-content: space-around;
-        display: flex;
-        height: auto;
-      } */
 }
 
 
@@ -930,6 +984,6 @@ span.fa-stack {
     .titleGroup {
         background: url(assets/banniere_web.jpg) no-repeat center top;
         background-size: cover;
-        height: 350px;
+        height: 450px;
     }
 }
