@@ -37,6 +37,7 @@ article {
     width: 95%;
     margin: 100px 0 0 0;
 }
+
 body {
     margin: 0;
     padding: 0;
@@ -98,10 +99,12 @@ article h2 {
     text-align: center;
     font-family: 'Raleway', 'sans-serif';
 }
+
 .tourisme {
     display: flex;
     justify-content: center;
 }
+
 /* Sélectionne  les articles  présents dans les pages index et tourisme */
 .index article,
 .tourisme article {
@@ -417,15 +420,13 @@ span.fa-stack {
     display: flex;
     justify-content: center;
 }
+
 .bienvenue h1 {
     color: var(--dark);
 }
 
 /* &&&&&&&&&&&&&&  IMAGES END   &&&&&&&&&&&&&&&&&& */
 
-.cadre img {
-    /* padding-top: 20px; */
-}
 .index article a {
     text-decoration: none;
 }
@@ -433,34 +434,36 @@ span.fa-stack {
 .index article a:hover {
     color: var(--main-color);
 }
-.images-desktop{ 
+
+.images-desktop {
     display: none;
 }
 
-    
-    
-@media screen and (min-width: 700px){  
 
-    .images-desktop{
-    display: initial;
-    
- }   
-   .images-galeries{
-    width: 300px;
-    display: flex;
-    justify-content: center;
-    
-    
 
-   }
+@media screen and (min-width: 700px) {
 
-   .images-galeries :first-child {
-    align-self: center;
+    .images-desktop {
+        display: initial;
 
-   }
-   }
-    
-       
+    }
+
+    .images-galeries {
+        width: 300px;
+        display: flex;
+        justify-content: center;
+
+
+
+    }
+
+    .images-galeries :first-child {
+        align-self: center;
+
+    }
+}
+
+
 
 /* ***************************************** */
 /* **************PAGE HISTOIRE************ */
@@ -727,17 +730,21 @@ span.fa-stack {
 /* *************PAGE ACTUALITES************ */
 /* ************************************** */
 
-.articleActu1, .articleActu2, .articleActu3, .articleActu4, .articleActu5 {
+.articleActu1,
+.articleActu2,
+.articleActu3,
+.articleActu4,
+.articleActu5 {
     padding: 1em;
     margin-top: var(--spacing-2);
     margin-bottom: var(--spacing-2);
     margin-left: var(--spacing);
     margin-right: var(--spacing);
-    padding: 1em;
     align-items: center;
     border: 1px solid #CCC;
     box-shadow: 0 0 5px grey;
 }
+
 .articleActu5 {
     display: none;
 }
@@ -804,32 +811,42 @@ span.fa-stack {
         background-size: cover;
         height: 450px;
     }
-    
+
     .gridActu {
+        width: 95%;
+        margin: auto;
         text-align: center;
-        margin: var(--spacing-2);
         display: grid;
         grid-template-columns: 1.5fr 1fr 0.5fr;
         grid-template-rows: repeat(3, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
     }
-        
+
     .articleActu4 {
         grid-area: 1 / 1 / 3 / 2;
     }
+
     .articleActu2 {
         grid-area: 1 / 2 / 2 / 3;
     }
+
     .articleActu3 {
         grid-area: 2 / 2 / 3 / 3;
     }
+
     .articleActu1 {
         grid-area: 3 / 1 / 4 / 3;
     }
+
     .articleActu5 {
         display: block;
+        width: 300px;
         grid-area: 1 / 3 / 4 / 4;
+    }
+
+    .actText {
+        padding-bottom: 0px;
     }
 }
 
@@ -864,10 +881,11 @@ span.fa-stack {
         display: flex;
         justify-content: center;
     }
-    .images-galeries{
+
+    .images-galeries {
         display: flex;
-    flex-direction: column;
-    align-items: center;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -878,10 +896,12 @@ span.fa-stack {
         background-size: cover;
         height: 350px;
     }
-} 
+}
+
 #landParallax {
     margin: 100px 0 0 0;
 }
+
 .parallax {
     height: 50vh;
     background-attachment: fixed;
@@ -890,21 +910,24 @@ span.fa-stack {
     background-size: cover;
     /* background-image: url("./asset/poudlar.png"),
       linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(53, 53, 142, 0) 35%); */
-  }
+}
 
-  .parallax1 {
+.parallax1 {
     background-image: url("./assets/arbre-soleil.jpg");
     /* background: rgb(0, 0, 0); */
-  }
-  .parallax2 {
+}
+
+.parallax2 {
     background-image: url("./galery/photoGalery-16.jpg");
     /* background: rgb(0, 0, 0); */
-  }
-  .landHistoire {
+}
+
+.landHistoire {
     display: flex;
     justify-content: center;
-  }
-  .images-end{
+}
+
+.images-end {
     display: flex;
     justify-content: center;
-  }
+}
