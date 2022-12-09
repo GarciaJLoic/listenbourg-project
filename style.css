@@ -8,7 +8,7 @@
 :root {
     /* ************Colors************ */
     --main-color: #AD2C40;
-    --secondary-color: #000308;
+    --secondary-color: #415271;
     --light: white;
     --dark: black;
     /* ************spacing************ */
@@ -19,7 +19,7 @@
     /* ************fonts************ */
     --title-font: 'Merriweather', serif;
     --secondaryTitle-font: 'Oswald', sans-serif;
-    --main-font: 'Raleway', sans-serif;
+    --main-font: 'Oswald', sans-serif;
 
     /* ************size************ */
     --text-font-size: 8pt;
@@ -51,7 +51,7 @@ main {
 
 /* Police, taille et couleur du H1 */
 h1 {
-    font-family: var(--Title-font);
+    font-family: var(--title-font);
     font-size: var(--title-font-size);
     color: var(--light);
 }
@@ -65,7 +65,7 @@ p {
 }
 
 section h1 {
-    font-family: 'Oswald', sans-serif;
+    font-family: var(--title-font);
     /* Police titre principal */
     font-size: var(--title-font-size);
     /* Taille police titre principal */
@@ -73,10 +73,11 @@ section h1 {
     /* Centrer le titre */
     padding-bottom: 5px;
     /* Padding bas */
+    color: var(--dark);
 }
 
 section p {
-    font-family: 'Raleway', sans-serif;
+    font-family: var(--main-font);
     /* Police paragraphe */
     font-size: var(--secondaryTitle-size);
     /* Taille police paragraphe */
@@ -97,7 +98,7 @@ section img {
 
 article h2 {
     text-align: center;
-    font-family: 'Raleway', 'sans-serif';
+    font-family: var(--secondaryTitle-font);
 }
 
 .tourisme {
@@ -222,14 +223,14 @@ footer h2 {
 
 input {
     width: 100%;
-    font-family: var(--text-font-size);
+    font-family: var(--main-font);
 }
 
 textarea {
     width: 100%;
     box-sizing: border-box;
     margin-top: 5px;
-    font-family: var(--text-font-size);
+    font-family: var(--main-font);
 }
 
 button {
@@ -496,8 +497,13 @@ footer i {
     align-items: center;
 }
 
+
+.evenementHistoire div {
+    text-align: center;
+}
+
 .histoire p {
-    font-size: var(--text-font-size);
+    font-size: 15px;
     margin: 0;
     padding: 0;
 }
@@ -518,32 +524,32 @@ footer i {
 }
 
 .histoire .frise li:nth-child(2) {
-    margin-top: 396px;
+    margin-top: 336px;
 }
 
 .histoire .frise li:nth-child(3) {
-    margin-top: 388px;
+    margin-top: 343px;
 }
 
 .histoire .frise li:nth-child(4) {
-    margin-top: 420px;
+    margin-top: 406px;
 }
 
 .histoire .frise li:nth-child(5) {
-    margin-top: 348px;
+    margin-top: 343px;
 }
 
 .histoire .frise li:nth-child(6) {
-    margin-top: 358px;
+    margin-top: 309px;
 }
 
 .histoire .frise li:nth-child(7) {
-    margin-top: 355px;
+    margin-top: 312px;
 
 }
 
 .histoire .frise li:nth-child(8) {
-    margin-top: 389px;
+    margin-top: 373px;
 }
 
 .histoire li img {
@@ -634,12 +640,13 @@ footer i {
 
 .index .article_presentation {
     display: flex;
-align-items: center;
-flex-direction: column;
-width: 88%;
-padding: 1em;
-margin: 40px auto;;
-   
+    align-items: center;
+    flex-direction: column;
+    width: 88%;
+    padding: 1em;
+    margin: 40px auto;
+    ;
+
 }
 
 
@@ -647,7 +654,8 @@ margin: 40px auto;;
     text-align: justify;
 
 }
-.presentationPage article{
+
+.presentationPage article {
     margin: auto;
 }
 
@@ -660,7 +668,7 @@ margin: 40px auto;;
 
 .miniature-p {
     font-size: 12pt;
-    
+
 }
 
 .tableau_regions {
@@ -881,6 +889,7 @@ margin: 40px auto;;
         margin-right: 20px;
     }
 }
+
 /* ********************************************* */
 /* **************PAGE PRESENTATION************ */
 /* ***************************************** */
@@ -892,18 +901,21 @@ margin: 40px auto;;
         align-items: center;
     }
 
-       .miniaturePresentation{
+    .miniaturePresentation {
         display: flex;
-        gap:50px
+        gap: 50px
     }
-    .presentationPage article{
+
+    .presentationPage article {
         width: auto;
     }
-    .index .article_presentation{
+
+    .index .article_presentation {
         margin: 30px 0px;
     }
 
 }
+
 /* ***************************************** */
 /* **************PAGE HISTOIRE************ */
 /* ************************************** */
@@ -947,7 +959,7 @@ margin: 40px auto;;
     }
 
     .histoire .evenementHistoire p {
-        font-size: 40px;
+        font-size: 30px;
         width: 40%;
         line-height: 49px;
     }
@@ -993,6 +1005,21 @@ margin: 40px auto;;
 
 
 @media screen and (min-width: 749px) {
+
+    .titleGroup {
+        background: url(assets/banniere_web.jpg) no-repeat center top;
+        background-size: cover;
+        height: 450px;
+    }
+
+    .titleGroup h1 {
+        font-size: 60px;
+    }
+
+    .titleGroup h2 {
+        font-size: 40px;
+    }
+
     form {
         width: 100%;
         padding: 1em;
@@ -1053,7 +1080,6 @@ margin: 40px auto;;
         /* enlève l'ombre autour des articles */
     }
 
-
     .pointInteret img {
         width: 3fr;
         height: 250px;
@@ -1061,7 +1087,6 @@ margin: 40px auto;;
     }
 
     .pointInteret h2 {
-        font-size: var(--text-font-size);
         text-align: center;
     }
 
@@ -1128,9 +1153,6 @@ margin: 40px auto;;
         padding: 20px;
         box-shadow: none;
     }
-
-
-
 
     .titleGroup {
         background: url(assets/banniere_web.jpg) no-repeat center top;
@@ -1210,19 +1232,14 @@ margin: 40px auto;;
         justify-content: center;
     }
 
+    .icon {
+        margin-left: 90px;
+    }
+
     .images-galeries {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-}
-
-
-@media screen and (min-width: 748px) {
-    .titleGroup {
-        background: url(assets/banniere_web.jpg) no-repeat center top;
-        background-size: cover;
-        height: 450px;
     }
 }
 
